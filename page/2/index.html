@@ -11,7 +11,7 @@
   <meta name="description" content="w-Volcano&#39;s Hexo Blog">
 <meta property="og:type" content="website">
 <meta property="og:title" content="w-Volcano&#39;s Hexo Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="w-Volcano&#39;s Hexo Blog">
 <meta property="og:description" content="w-Volcano&#39;s Hexo Blog">
 <meta property="og:locale" content="zh_CN">
@@ -167,559 +167,36 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Webpack" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JS基础2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/03/Webpack/">Webpack</a>
+      <a class="article-title" href="/2020/05/03/JS%E5%9F%BA%E7%A1%802/">JS基础2</a>
     </h1>
   
 
         
-        <a href="/2020/05/03/Webpack/" class="archive-article-date">
-  	<time datetime="2020-05-03T10:02:40.506Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
+        <a href="/2020/05/03/JS%E5%9F%BA%E7%A1%802/" class="archive-article-date">
+  	<time datetime="2020-05-03T09:58:45.551Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p> 本篇笔记使用的<code>webpack</code>版本为3.6.0 ，因为vue cli2依赖于这个版本</p>
-</blockquote>
-<h1 id="什么是webpack"><a href="#什么是webpack" class="headerlink" title="什么是webpack"></a>什么是webpack</h1><p><img src="http://r.photo.store.qq.com/psc?/V11pE66P10rTJP/wSJ2S*tZT7v.5zxXfWcfXVxJmFbP5pYCG*zWvc.UDhenxffi82.PYC.lYReuA.AyT7ywpj2ErwNOp5t1LD7rNpEOXnYDwsKaC2Npyu.bqLk!/r" alt=""></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Vue/" class="article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/03/Webpack/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-Vue组件化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/03/Vue%E7%BB%84%E4%BB%B6%E5%8C%96/">Vue组件化</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/03/Vue%E7%BB%84%E4%BB%B6%E5%8C%96/" class="archive-article-date">
-  	<time datetime="2020-05-03T10:02:40.499Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><ol>
-<li><p>创建组件构造器</p>
-<p><code>Vue.extend()</code></p>
-</li>
-<li><p>注册组件</p>
-<p><code>Vue.component()</code></p>
-</li>
-<li><p>使用组件</p>
-</li>
-</ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- 3.使用组件(必须已经被Vue托管) --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">Mycpn</span>&gt;</span><span class="tag">&lt;/<span class="name">Mycpn</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="actionscript">	<span class="comment">// 1.创建组件构造器</span></span></span><br><span class="line"><span class="actionscript">	<span class="keyword">const</span> cpnC = Vue.extend(&#123;</span></span><br><span class="line">		template:`</span><br><span class="line"><span class="handlebars"><span class="xml">		<span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">			<span class="tag">&lt;<span class="name">h2</span>&gt;</span>我是标题二<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">			<span class="tag">&lt;<span class="name">p</span>&gt;</span>我是段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">			<span class="tag">&lt;<span class="name">p</span>&gt;</span>我是段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span></span><br><span class="line"><span class="handlebars"><span class="xml">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span></span><br><span class="line">		`</span><br><span class="line">	&#125;);</span><br><span class="line"><span class="actionscript">	<span class="comment">// 2.注册组件(全局) 对Vue对象托管的元素生效</span></span></span><br><span class="line"><span class="actionscript">	<span class="comment">//Vue.component('my-cpn',cpnC); 标签名最多支持首字母大写，不能使用驼峰命名法</span></span></span><br><span class="line"><span class="actionscript">	<span class="keyword">const</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="actionscript">		el:<span class="string">'#app'</span>,</span></span><br><span class="line">		data:&#123;</span><br><span class="line">			</span><br><span class="line">		&#125;,</span><br><span class="line"><span class="actionscript">		<span class="comment">//2.注册组件(局部) 只对被该Vue对象托管的元素生效</span></span></span><br><span class="line">		components:&#123;</span><br><span class="line"><span class="actionscript">			<span class="comment">//标签名:组件构造器</span></span></span><br><span class="line">			Mycpn:cpnC</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Vue/" class="article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/03/Vue%E7%BB%84%E4%BB%B6%E5%8C%96/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-Vuex" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/03/Vuex/">Vuex</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/03/Vuex/" class="archive-article-date">
-  	<time datetime="2020-05-03T10:02:40.490Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="什么是Vuex"><a href="#什么是Vuex" class="headerlink" title="什么是Vuex"></a>什么是Vuex</h2><p><img src="http://r.photo.store.qq.com/psc?/V11pE66P10rTJP/wSJ2S*tZT7v.5zxXfWcfXTCcmc6D.Nb8mWaVWm7.KapfFIJ6oU7PF9sYpAUW3bCA*yukDNdjarW34b*.ksvTJT.kWAZwQPTSAPKlniFkLZA!/r" alt=""></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Vue/" class="article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/03/Vuex/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-VueRouter" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/03/VueRouter/">VueRouter</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/03/VueRouter/" class="archive-article-date">
-  	<time datetime="2020-05-03T10:02:40.482Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="修改url却不刷新网页的方法"><a href="#修改url却不刷新网页的方法" class="headerlink" title="修改url却不刷新网页的方法"></a>修改url却不刷新网页的方法</h1><ol>
-<li><code>location.hash = &#39;newUrl&#39;</code></li>
-<li><code>html5</code>模式，<code>history.pushState({},&#39;&#39;,&#39;newUrl&#39;)</code> 入栈操作 <code>history.back()</code> 出栈操作</li>
-<li><code>html5</code>模式，<code>history.replaceState({},&#39;&#39;,&#39;newUrl&#39;)</code> </li>
-</ol>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue-router --save</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Vue/" class="article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/03/VueRouter/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-VueNote" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/03/VueNote/">VueNote</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/03/VueNote/" class="archive-article-date">
-  	<time datetime="2020-05-03T10:02:40.476Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Vue初体验"><a href="#Vue初体验" class="headerlink" title="Vue初体验"></a>Vue初体验</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">		&lt;title&gt;&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">		&lt;script src="vue.js" type="text/</span>javascript<span class="string">" charset="</span>utf<span class="number">-8</span><span class="string">"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">	&lt;/head&gt;</span></span><br><span class="line"><span class="string">	&lt;body&gt;</span></span><br><span class="line"><span class="string">		&lt;div id="</span>app<span class="string">"&gt;&#123;&#123;message&#125;&#125;&lt;/div&gt;</span></span><br><span class="line"><span class="string">	&lt;script type="</span>text/javascript<span class="string">"&gt;</span></span><br><span class="line"><span class="string">		var app=new Vue(&#123;</span></span><br><span class="line">			el:"#app",</span><br><span class="line">			data:&#123;</span><br><span class="line">				message:<span class="string">"测试内容！"</span></span><br><span class="line">			&#125;,</span><br><span class="line">			methods:&#123;</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;)</span><br><span class="line">	&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">	&lt;/</span>body&gt;</span><br><span class="line">&lt;<span class="regexp">/html&gt;</span></span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Vue/" class="article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/03/VueNote/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-VueCLI" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/03/VueCLI/">VueCLI</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/03/VueCLI/" class="archive-article-date">
-  	<time datetime="2020-05-03T10:02:40.469Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="什么是VueCLI"><a href="#什么是VueCLI" class="headerlink" title="什么是VueCLI"></a>什么是VueCLI</h1><p><img src="http://r.photo.store.qq.com/psc?/V11pE66P10rTJP/wSJ2S*tZT7v.5zxXfWcfXYRIRzcEvAx.EB4Ue9xFoNJeZtoI*Hplty15EpH6fMcJRRBgMDFffMF.zUZF32wa0EDTrFP0VyFhJ1SQmPZb.xo!/r" alt=""></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Vue/" class="article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/03/VueCLI/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-axios" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/03/axios/">axios</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/03/axios/" class="archive-article-date">
-  	<time datetime="2020-05-03T10:02:40.455Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="为什么使用axios"><a href="#为什么使用axios" class="headerlink" title="为什么使用axios"></a>为什么使用axios</h2><ul>
-<li><code>Vue</code>作者不再维护<code>vue-resource</code>，而推荐使用<code>axios</code></li>
-<li><code>axios</code>功能特点<ul>
-<li>在浏览器中发送<code>XMLHttpRequests</code>请求</li>
-<li>在<code>node.js</code>中发送<code>http</code>请求</li>
-<li>支持<code>Promise API</code></li>
-<li>拦截请求和响应</li>
-<li>转换请求和响应数据</li>
-<li>等等</li>
-</ul>
-</li>
-</ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Vue/" class="article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/03/axios/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-Node" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/03/Node/">Node</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/03/Node/" class="archive-article-date">
-  	<time datetime="2020-05-03T10:01:21.847Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="认知"><a href="#认知" class="headerlink" title="认知"></a>认知</h1><h2 id="Node-js是什么"><a href="#Node-js是什么" class="headerlink" title="Node.js是什么"></a>Node.js是什么</h2><ul>
-<li><code>Node.js</code> 不是一门语言</li>
-<li><code>Node.js</code>不是库、不是框架</li>
-<li><code>Node.js</code> 是一个<code>JavaScript</code>运行时环境</li>
-<li>简单点来讲就是<code>Node.js</code> 可以解析和执行<code>JavaScript</code>代码</li>
-<li>以前只有浏览器可以可以解析执行<code>JavaScript</code>代码</li>
-<li>也就是说现在的JavaScript 可以完全脱离浏览器来运行，一切都归功于：<code>Node.js</code></li>
-</ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Node/" class="article-tag-list-link color5">Node</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/03/Node/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-杂项" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/03/%E6%9D%82%E9%A1%B9/">杂项</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/03/%E6%9D%82%E9%A1%B9/" class="archive-article-date">
-  	<time datetime="2020-05-03T09:58:45.573Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="call-apply-bind-总结"><a href="#call-apply-bind-总结" class="headerlink" title="call apply bind 总结"></a>call apply bind 总结</h2><p><img src="http://r.photo.store.qq.com/psc?/V11pE66P10rTJP/wSJ2S*tZT7v.5zxXfWcfXZN21ZtEq.JF5.DcgIAY4prdLx8HirL5qsKEQy9hjv.Syry3Ltqk0uNWO4Y7oGO4.8drisAXsmTBZ9g5uRCGooY!/r" alt="12pBqO.md.png"></p>
+        <h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><p><code>Document Object Model</code>文档对象模型，通过浏览器提供的<code>document</code>对象获取元素。</p>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p>​    事件就是文档或浏览器窗口中发生的一些特定的交互瞬间。</p>
+<p>​    <code>javascript</code>与<code>HTML</code>之间的交互是通过事件实现的。</p>
+<p>​    对于<code>Web</code>应用来说,有下面这些代表性的事件：点击某个元素,将鼠标移动至某个元素上方,按下键盘上的某个案件，等等。</p>
+<p>例：给按钮绑定一个事件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> btn=<span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>);</span><br><span class="line">btn.onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>​        事件函数的代码应该写在元素后面，因为所有代码都是逐行执行的，事件函数需要先获取元素,但是写在<code>HTML</code>元素前，元素未被创建，自然无法获取元素。</p>
+<p>​        可以将事件函数代码写进<code>window.onload()</code>方法中，因为<code>onload</code>方法是在页面加载完毕时再执行。</p>
+<p>​        写在最后的效率最高，用户体验最好。</p>
         
       
 
@@ -743,7 +220,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/03/%E6%9D%82%E9%A1%B9/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/05/03/JS%E5%9F%BA%E7%A1%802/">展开全文 >></a>
         </p>
       
 
@@ -761,29 +238,43 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-高级方法和函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JS基础1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/03/%E9%AB%98%E7%BA%A7%E6%96%B9%E6%B3%95%E5%92%8C%E5%87%BD%E6%95%B0/">高级方法和函数</a>
+      <a class="article-title" href="/2020/05/03/JS%E5%9F%BA%E7%A1%801/">JS基础1</a>
     </h1>
   
 
         
-        <a href="/2020/05/03/%E9%AB%98%E7%BA%A7%E6%96%B9%E6%B3%95%E5%92%8C%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2020-05-03T09:58:45.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
+        <a href="/2020/05/03/JS%E5%9F%BA%E7%A1%801/" class="archive-article-date">
+  	<time datetime="2020-05-03T09:58:45.542Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="数组新增方法"><a href="#数组新增方法" class="headerlink" title="数组新增方法"></a>数组新增方法</h2><h3 id="遍历-forEach"><a href="#遍历-forEach" class="headerlink" title="遍历(forEach)"></a>遍历(<code>forEach</code>)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>];</span><br><span class="line"><span class="keyword">var</span> num = <span class="number">0</span>;</span><br><span class="line">arr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">value,index,array</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//遍历数组</span></span><br><span class="line">    <span class="comment">//value:数组当前元素</span></span><br><span class="line">    <span class="comment">//index:数组当前索引</span></span><br><span class="line">    <span class="comment">//array:数组本身</span></span><br><span class="line">    num+=value;<span class="comment">//例：求和</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//返回值为null</span></span><br><span class="line"><span class="built_in">console</span>.log(num);</span><br></pre></td></tr></table></figure>
-
-<h3 id="过滤-filter"><a href="#过滤-filter" class="headerlink" title="过滤(filter)"></a>过滤(<code>filter</code>)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>];</span><br><span class="line">arr.filter(<span class="function"><span class="keyword">function</span>(<span class="params">value,index,array</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//value:数组当前元素</span></span><br><span class="line">    <span class="comment">//index:数组当前索引</span></span><br><span class="line">    <span class="comment">//array:数组本身</span></span><br><span class="line">    <span class="comment">//回调函数中返回一个布尔值,布尔值为true时,当前元素会进入新数组返回</span></span><br><span class="line">    <span class="keyword">return</span> value&gt;<span class="number">2</span>;<span class="comment">//例：获取数组中大于2的元素</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//返回一个新的数组</span></span><br></pre></td></tr></table></figure>
+        <h1 id="六大数据类型"><a href="#六大数据类型" class="headerlink" title="六大数据类型"></a>六大数据类型</h1><ul>
+<li><code>Number</code></li>
+<li><code>String</code></li>
+<li><code>Boolean</code></li>
+<li><code>Null</code><ul>
+<li>类型属于<code>Object</code>，其他均属于自己</li>
+</ul>
+</li>
+<li><code>Undefined</code><ul>
+<li>以上基本数据类型</li>
+</ul>
+</li>
+<li><code>Object</code><ul>
+<li>引用数据类型</li>
+</ul>
+</li>
+</ul>
         
       
 
@@ -807,7 +298,632 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/03/%E9%AB%98%E7%BA%A7%E6%96%B9%E6%B3%95%E5%92%8C%E5%87%BD%E6%95%B0/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/05/03/JS%E5%9F%BA%E7%A1%801/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-JQuery" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/03/JQuery/">JQuery</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/03/JQuery/" class="archive-article-date">
+  	<time datetime="2020-05-03T09:58:45.536Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="入口函数"><a href="#入口函数" class="headerlink" title="入口函数"></a>入口函数</h1><h2 id="加载模式"><a href="#加载模式" class="headerlink" title="加载模式"></a>加载模式</h2><p><strong>原生<code>JS</code>和<code>JQuery</code>入口函数的加载模式不同</strong></p>
+<p>原生<code>JS</code>会等到<code>DOM</code>元素加载完毕，并且图片这些外部资源也加载完毕才会执行</p>
+<p>​    <code>JQuery</code>会等到<code>DOM</code>元素加载完毕，但不会等到图片这些外部资源也加载完毕就会执行</p>
+<p>原生<code>JS</code>如果编写了多个入口函数<code>onload</code>，后写的会覆盖之前的</p>
+<p>​    <code>JQuery</code>如果编写了多个入口函数，后写的不会覆盖之前的</p>
+<h2 id="写法"><a href="#写法" class="headerlink" title="写法"></a>写法</h2><ul>
+<li>   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	alert(<span class="string">"第一种入口函数"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+<li>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">jQuery(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	alert(<span class="string">"第二种入口函数"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Javascript/" class="article-tag-list-link color1">Javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/03/JQuery/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-AJAX" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/03/AJAX/">AJAX</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/03/AJAX/" class="archive-article-date">
+  	<time datetime="2020-05-03T09:58:45.517Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="AJAX是什么"><a href="#AJAX是什么" class="headerlink" title="AJAX是什么"></a>AJAX是什么</h1><p>AJAX是在不重新加载整个页面的情况下，与服务器交换数据并更新部分网页的技术。</p>
+<h1 id="创建AJAX请求的步骤"><a href="#创建AJAX请求的步骤" class="headerlink" title="创建AJAX请求的步骤"></a>创建AJAX请求的步骤</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">     <span class="keyword">var</span> oBtn = <span class="built_in">document</span>.querySelector(<span class="string">"button"</span>);</span><br><span class="line">     oBtn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">         <span class="comment">//1.创建一个异步对象</span></span><br><span class="line">        <span class="keyword">var</span> xmlhttp;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">window</span>.XMLHttpRequest)&#123;</span><br><span class="line">            xmlhttp=<span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            xmlhttp=<span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);<span class="comment">//兼容IE5和6</span></span><br><span class="line">       &#125;</span><br><span class="line">         <span class="comment">//2.设置请求方式和请求地址</span></span><br><span class="line">         <span class="comment">/*</span></span><br><span class="line"><span class="comment">            method:请求的类型 GET或POST</span></span><br><span class="line"><span class="comment">            rl:文件在服务器上的位置</span></span><br><span class="line"><span class="comment">           async:true(异步) 或 false(同步) </span></span><br><span class="line"><span class="comment">           AJAX的意义就是异步，所以只填true</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">         xmlhttp.open(<span class="string">"GET"</span>,<span class="string">"03-AJAX_1.php"</span>,<span class="literal">true</span>);</span><br><span class="line">         <span class="comment">//3.发送请求</span></span><br><span class="line">         xmlhttp.send();</span><br><span class="line">         <span class="comment">//4.监听状态的变化</span></span><br><span class="line">         xmlhttp.onreadystatechange=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">             <span class="comment">/*状态变化的四个代号</span></span><br><span class="line"><span class="comment">                0：请求未初始化</span></span><br><span class="line"><span class="comment">                1：服务器连接已建立</span></span><br><span class="line"><span class="comment">                2：请求已接收</span></span><br><span class="line"><span class="comment">                3：请求处理中</span></span><br><span class="line"><span class="comment">                4：请求已完成，且响应已就绪</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">             <span class="comment">/*HTTP状态码</span></span><br><span class="line"><span class="comment">               200&lt;=状态码&lt;300或状态码==304均算成功</span></span><br><span class="line"><span class="comment">             */</span></span><br><span class="line">             f(xmlhttp.readyState == <span class="number">4</span>)&#123;</span><br><span class="line">                <span class="comment">//表示是否请求成功</span></span><br><span class="line">                <span class="keyword">if</span>(xmlhttp.status&gt;=<span class="number">200</span>&amp;&amp;xmlhttp.status&lt;<span class="number">300</span>||xmlhttp.status==<span class="number">304</span>)&#123;</span><br><span class="line">                    <span class="comment">//5.处理返回的结果</span></span><br><span class="line">                     <span class="built_in">console</span>.log(xmlhttp.responseText);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="built_in">console</span>.log(<span class="string">"没有接受到服务器返回的数据"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Javascript/" class="article-tag-list-link color1">Javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/03/AJAX/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-HTML5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/03/HTML5/">HTML5</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/03/HTML5/" class="archive-article-date">
+  	<time datetime="2020-05-03T09:56:56.664Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="什么是H5"><a href="#什么是H5" class="headerlink" title="什么是H5"></a>什么是H5</h1><ol>
+<li><code>H5</code>并不是新的语言，而是<code>html</code>语言的第五次重大修改一版本</li>
+<li>支持：所有的主流浏览器都支持<code>h5</code>（<code>chrome</code>，<code>firefox</code>，<code>safari</code>….）。<strong>IE9(部分支持)及以上支持H5，但是IE8及以下不支持H5</strong></li>
+<li>改变了用户与文档的交互方式：多媒体：<code>video audio canvas</code></li>
+<li>增加了其它的新特性：语义特性，本地存储特性，网页多媒体，二维三维，特效（过渡，动画）</li>
+<li>相对于<code>H4</code><ol>
+<li>进步：抛弃了一些不合理不常用的标记和属性</li>
+<li>新增了一些标记和属性一表单</li>
+<li>从代码角度而言，<code>H5</code>的网页结构代码更简洁</li>
+</ol>
+</li>
+</ol>
+<h1 id="语义化标签的使用"><a href="#语义化标签的使用" class="headerlink" title="语义化标签的使用"></a>语义化标签的使用</h1><table>
+<thead>
+<tr>
+<th align="center">标签</th>
+<th align="center">语义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>nav</code></td>
+<td align="center">导航</td>
+</tr>
+<tr>
+<td align="center"><code>header</code></td>
+<td align="center">页眉</td>
+</tr>
+<tr>
+<td align="center"><code>footer</code></td>
+<td align="center">页脚</td>
+</tr>
+<tr>
+<td align="center"><code>main</code></td>
+<td align="center">文档主要内容</td>
+</tr>
+<tr>
+<td align="center"><code>article</code></td>
+<td align="center">文章</td>
+</tr>
+<tr>
+<td align="center"><code>aside</code></td>
+<td align="center">主题内容之外</td>
+</tr>
+</tbody></table>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/HTML/" class="article-tag-list-link color5">HTML</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/03/HTML5/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-HTML" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/03/HTML/">HTML</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/03/HTML/" class="archive-article-date">
+  	<time datetime="2020-05-03T09:56:56.648Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span>内容<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>使用type属性设置项目符号</p>
+</li>
+<li><p>内置的默认项目符号坚决不用</p>
+</li>
+<li><p>各浏览器显示不一 垃圾</p>
+</li>
+<li><p>ul 和 li 都是块级元素</p>
+</li>
+</ul>
+<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span>内容<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>使用type属性设置序号类型</p>
+<ul>
+<li>可选值：    </li>
+<li>1：使用阿拉伯数字</li>
+<li>A/a：使用大写/小写字母</li>
+<li>I/i：使用大写/小写罗马数字</li>
+</ul>
+</li>
+<li><p>内置的默认项目符号坚决不用</p>
+</li>
+<li><p>各浏览器显示不一 垃圾</p>
+</li>
+<li><p>ul 和 li都是块级元素</p>
+</li>
+</ul>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/HTML/" class="article-tag-list-link color5">HTML</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/03/HTML/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-Promise" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/03/Promise/">Promise</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/03/Promise/" class="archive-article-date">
+  	<time datetime="2020-05-03T09:55:02.389Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><code>promise</code>解决回调地狱的问题</p>
+<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>) =&gt;</span>&#123;<span class="comment">//存放一个需要执行的异步操作</span></span><br><span class="line">	setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;<span class="comment">//模拟异步操作</span></span><br><span class="line">		<span class="keyword">let</span> flag = <span class="literal">true</span>;<span class="comment">//假设该异步操作有成功或失败</span></span><br><span class="line">		<span class="keyword">if</span>(flag)</span><br><span class="line">			resolve(<span class="string">'第一次success!'</span>);<span class="comment">//成功主动调用resolve</span></span><br><span class="line">			<span class="comment">//其中的参数会作为then中第一个函数的参数</span></span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			reject(<span class="string">'第一次error!'</span>);<span class="comment">//失败主动调用reject</span></span><br><span class="line">			<span class="comment">//其中的参数会作为then中第二个函数的参数,或者作为catch中函数的参数</span></span><br><span class="line">	&#125;,<span class="number">1000</span>)</span><br><span class="line">&#125;).then(<span class="function">(<span class="params">suc</span>)=&gt;</span>&#123;<span class="comment">//如果有需要嵌套异步操作,则在then的第一个函数中返回一个新的Promise对象,这样可以继续使用then进行链式调用,个人推荐不要用catch,因为catch后面无法链式调用then</span></span><br><span class="line">	<span class="built_in">console</span>.log(suc);</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>) =&gt;</span>&#123;</span><br><span class="line">		setTimeout(<span class="function"><span class="params">()</span> =&gt;</span>&#123;</span><br><span class="line">			<span class="keyword">let</span> flag = <span class="literal">true</span>;</span><br><span class="line">			<span class="keyword">if</span>(flag)</span><br><span class="line">				resolve(<span class="string">'第二次success!'</span>);</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				reject(<span class="string">'第二次error!'</span>);</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;,(err) =&gt; &#123;</span><br><span class="line">	<span class="built_in">console</span>.log(err);</span><br><span class="line">&#125;).then(<span class="function">(<span class="params">suc</span>) =&gt;</span> &#123;</span><br><span class="line">	<span class="built_in">console</span>.log(suc);</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Promise</span>.resolve(suc);<span class="comment">//若只是想处理数据,没有异步操作,可以直接返回Promise.resolve()或者Promise.reject()</span></span><br><span class="line">	<span class="comment">// return suc //是一行代码的简写,内部会给这返回值封装一个Promise</span></span><br><span class="line">&#125;,(err) =&gt; &#123;</span><br><span class="line">	<span class="built_in">console</span>.log(err);</span><br><span class="line">&#125;).then(<span class="function"><span class="params">suc</span> =&gt;</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'仅仅处理后的'</span>+suc);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Javascript/" class="article-tag-list-link color1">Javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/03/Promise/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-ES6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/03/ES6/">ES6</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/03/ES6/" class="archive-article-date">
+  	<time datetime="2020-05-03T09:55:02.369Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="定义变量的方法"><a href="#定义变量的方法" class="headerlink" title="定义变量的方法"></a>定义变量的方法</h1><h2 id="let和const"><a href="#let和const" class="headerlink" title="let和const"></a>let和const</h2><p>​    ES5有两种定义变量的方法：<code>var</code>和<code>function</code>。</p>
+<p>​    ES6一共有6中声明变量的方法。</p>
+<ul>
+<li><code>var</code></li>
+<li><code>function</code></li>
+<li><code>let</code></li>
+<li><code>const</code></li>
+<li><code>import</code></li>
+<li><code>class</code></li>
+</ul>
+<h3 id="let关键字"><a href="#let关键字" class="headerlink" title="let关键字"></a><code>let</code>关键字</h3><h4 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="keyword">let</span>声明变量只在其所在的代码块内有效</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">var</span> b = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a <span class="comment">// 报错，ReferenceError： a is not defined</span></span><br><span class="line">b <span class="comment">// 1 </span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> <span class="keyword">for</span>循环中用<span class="keyword">let</span>定义的变量只在循环体内有效，在循环体外就无法使用，和<span class="keyword">var</span>不同。并且<span class="keyword">for</span>()中设置循环变量的是一个父作用域，而</span><br><span class="line">循环体内是另外一个单独的作用域。</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>;++i)&#123;</span><br><span class="line">    <span class="keyword">let</span> i = <span class="string">'abc'</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(i)</span><br><span class="line">&#125;</span><br><span class="line">输出：</span><br><span class="line">abc abc abc   <span class="comment">//可见是两个单独的作用域</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> 不允许重复声明变量  <span class="keyword">let</span>不允许在相同作用域内,重复声明一个变量</span><br><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">1</span>;  <span class="comment">//报错 </span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">88</span>;  <span class="comment">//报错 </span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//因此不能在函数内部用let重新声明参数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">arg</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> arg; <span class="comment">// 报错</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Javascript/" class="article-tag-list-link color1">Javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/03/ES6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-CSS3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/03/CSS3/">CSS3</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/03/CSS3/" class="archive-article-date">
+  	<time datetime="2020-05-03T09:51:29.303Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="target伪类"><a href="#target伪类" class="headerlink" title="target伪类"></a>target伪类</h2><p><code>选择器:target{}</code></p>
+<p>若该选择器被超链接设置锚点，则触发超链接时，改变样式。</p>
+<h2 id="色彩模式"><a href="#色彩模式" class="headerlink" title="色彩模式"></a>色彩模式</h2><ul>
+<li><code>RGB(A):rgb(0~255,0~255,0~255(,0~1))</code></li>
+<li><code>HSL(A):hsl(颜色(0～360)，饱和度(0%~100%)，明度(0%~180%),(0~1))</code></li>
+</ul>
+<p>H5中，明度默认是<code>50%</code></p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/CSS/" class="article-tag-list-link color4">CSS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/03/CSS3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-移动端网页" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/03/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%BD%91%E9%A1%B5/">移动端网页</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/03/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%BD%91%E9%A1%B5/" class="archive-article-date">
+  	<time datetime="2020-05-03T09:51:29.235Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="视口"><a href="#视口" class="headerlink" title="视口"></a>视口</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>解释说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>width</code></td>
+<td>宽度设置的是<code>viewport</code>宽度，课题设置<code>device-width</code>特殊值</td>
+</tr>
+<tr>
+<td><code>initial-scale</code></td>
+<td>初始缩放比，大于<code>0</code>的数字</td>
+</tr>
+<tr>
+<td><code>maximum-scale</code></td>
+<td>最大缩放比，大于<code>0</code>的数字</td>
+</tr>
+<tr>
+<td><code>minimum-scale</code></td>
+<td>最小缩放比，大于<code>0</code>的数字</td>
+</tr>
+<tr>
+<td><code>user-scalable</code></td>
+<td>用户是否可以缩放，<code>yes</code>或<code>no</code>(<code>0</code>或<code>1</code>)</td>
+</tr>
+</tbody></table>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/CSS/" class="article-tag-list-link color4">CSS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/03/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%BD%91%E9%A1%B5/">展开全文 >></a>
         </p>
       
 
@@ -827,7 +943,7 @@ var _hmt = _hmt || [];
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &gt;</a>
+      <a class="extend prev" rel="prev" href="/">&lt; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &gt;</a>
     </nav>
   
 

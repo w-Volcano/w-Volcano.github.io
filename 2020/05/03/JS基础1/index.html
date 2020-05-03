@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>JS基础1 | w-Volcano&#39;s Hexo Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="六大数据类型 Number String Boolean Null 类型属于Object，其他均属于自己   Undefined 以上基本数据类型   Object 引用数据类型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS基础1">
+<meta property="og:url" content="http://yoursite.com/2020/05/03/JS%E5%9F%BA%E7%A1%801/index.html">
+<meta property="og:site_name" content="w-Volcano&#39;s Hexo Blog">
+<meta property="og:description" content="六大数据类型 Number String Boolean Null 类型属于Object，其他均属于自己   Undefined 以上基本数据类型   Object 引用数据类型">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-05-03T09:58:45.542Z">
+<meta property="article:modified_time" content="2020-05-03T10:19:38.403Z">
+<meta property="article:author" content="w-Volcano">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternative" href="/atom.xml" title="w-Volcano&#39;s Hexo Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/touxiang.jpg">
+  
+  <link rel="stylesheet" type="text/css" href="/./main.2d7529.css">
+  <style type="text/css">
+  
+    #container.show {
+      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+    }
+  </style>
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'volcano&#39;s blog', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?volcano&#39;s blog";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      
+<div class="overlay" style="background: #F6E37A"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="/img/touxiang.jpg" class="js-avatar">
+		</a>
+		<hgroup>
+		  <h1 class="header-author"><a href="/">w-Volcano</a></h1>
+		</hgroup>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/categories">分类</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+    		
+    			
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			
+            
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/w-Volcano/w-Volcano.github.io" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="mail" target="_blank" href="mailto:1317832781@qq.com" title="mail"><i class="icon-mail"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      
+<nav id="mobile-nav">
+  	<div class="overlay js-overlay" style="background: #F6E37A"></div>
+	<div class="btnctn js-mobile-btnctn">
+  		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
+	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/img/touxiang.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author js-header-author">w-Volcano</h1>
+			</hgroup>
+			
+			
+			
+				
+			
+				
+			
+			
+			
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/w-Volcano/w-Volcano.github.io" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:1317832781@qq.com" title="mail"><i class="icon-mail"></i></a>
+			        
+				</div>
+			</nav>
+
+			<nav class="header-menu js-header-menu">
+				<ul style="width: 50%">
+				
+				
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/categories">分类</a></li>
+		        
+				</ul>
+			</nav>
+		</header>				
+	</div>
+	<div class="mobile-mask" style="display:none" q-show="isShow"></div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-JS基础1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JS基础1
+    </h1>
+  
+
+        
+        <a href="/2020/05/03/JS%E5%9F%BA%E7%A1%801/" class="archive-article-date">
+  	<time datetime="2020-05-03T09:58:45.542Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="六大数据类型"><a href="#六大数据类型" class="headerlink" title="六大数据类型"></a>六大数据类型</h1><ul>
+<li><code>Number</code></li>
+<li><code>String</code></li>
+<li><code>Boolean</code></li>
+<li><code>Null</code><ul>
+<li>类型属于<code>Object</code>，其他均属于自己</li>
+</ul>
+</li>
+<li><code>Undefined</code><ul>
+<li>以上基本数据类型</li>
+</ul>
+</li>
+<li><code>Object</code><ul>
+<li>引用数据类型</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+
+<h1 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h1><p>主要是转换为</p>
+<ul>
+<li><code>String</code></li>
+<li><code>Number</code></li>
+<li><code>Boolean</code></li>
+</ul>
+<h2 id="转换为String"><a href="#转换为String" class="headerlink" title="转换为String"></a>转换为String</h2><ol>
+<li><p>调用被转换数据类型的<code>toString()</code>方法</p>
+<p>该方法不会改变原变量，而是返回一个新的值</p>
+<p>无法调用<code>Null</code>和<code>Undefined</code>的<code>toString()</code>方法,会报错</p>
+</li>
+<li><p>调用<code>String()</code>函数，将被转换变量作为参数</p>
+<p>对于<code>Number</code>和<code>Boolean</code>其实就是调用了<code>toString()</code>方法</p>
+<p>该方法不会改变原变量，而是返回一个新的值</p>
+<p>可以以<code>Null</code>和<code>Undefined</code>为参数</p>
+</li>
+</ol>
+<h2 id="转换为Number"><a href="#转换为Number" class="headerlink" title="转换为Number"></a>转换为Number</h2><ol>
+<li><p>调用<code>Number()</code>函数</p>
+<ul>
+<li><p>如果参数值不是合法数值字符串,则会得到结果<code>NaN(Not a Number)</code>，但类型也是<code>Number</code>；如果参数值是空字符串则会返回<code>0</code></p>
+</li>
+<li><p>如果参数是布尔型，则<code>true</code>返回<code>1</code>,<code>false</code>返回<code>0</code></p>
+</li>
+<li><p>如果参数为<code>null</code>，则返回<code>0</code></p>
+</li>
+<li><p>如果参数为<code>undefined</code>，则返回<code>NaN</code></p>
+</li>
+</ul>
+</li>
+<li><p>调用<code>parseInt()</code>,<code>parseFloat()</code>函数，专门应对字符串</p>
+<ul>
+<li><code>parseInt()</code>可以将字符串内有效的整数读出来</li>
+</ul>
+<p>​            从头开始碰到非数字则会停下并返回</p>
+<ul>
+<li><code>parseFloat()</code>可以将字符串内有效的小数读出来</li>
+</ul>
+<p>​            从头开始到碰到第一个小数点后如果碰到非数字则停下并返回</p>
+<ul>
+<li>对于非<code>String</code>参数使用时</li>
+</ul>
+<p>​            它们会先将参数转化为<code>String</code>，然后再操作</p>
+</li>
+</ol>
+<h2 id="转换为Boolean"><a href="#转换为Boolean" class="headerlink" title="转换为Boolean"></a>转换为Boolean</h2><ol>
+<li><p>调用<code>Boolean()</code>函数</p>
+<ul>
+<li><p>除了<code>0</code>和<code>NaN</code>，其他的数字均转化为<code>true</code></p>
+</li>
+<li><p>除了空字符串，其他的串均转化为<code>true</code></p>
+</li>
+<li><p><code>null</code>和<code>undefined</code>都会转化为<code>false</code></p>
+</li>
+<li><p>对象<code>object</code>也会转化为<code>true</code></p>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="各个进制的表示和注意事项"><a href="#各个进制的表示和注意事项" class="headerlink" title="各个进制的表示和注意事项"></a>各个进制的表示和注意事项</h1><ul>
+<li><p>十六进制：以<code>0x</code>开头的数字</p>
+</li>
+<li><p>八进制：以<code>0</code>开头的数字</p>
+</li>
+<li><p>二进制：以<code>0b</code>开头的数字(有些浏览器不支持)</p>
+</li>
+<li><p>所有进制被输出时：都会以十进制的形式输出</p>
+</li>
+</ul>
+<h1 id="运算符（操作符）"><a href="#运算符（操作符）" class="headerlink" title="运算符（操作符）"></a>运算符（操作符）</h1><p><code>typeof</code>返回类型,返回值的类型为字符串</p>
+<ul>
+<li>+<ul>
+<li>若其中有<code>String</code>，会进行串接操作，结果会变成字符串,是一个隐式转换,本质是调用<code>String()</code></li>
+<li>非<code>NaN</code>和非字符串与数字相加，都会先转化为数字再计算</li>
+</ul>
+</li>
+<li>-，*，/<ul>
+<li>将两个值都转换为<code>Number</code>进行计算</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>太杂了,大概了解一下就行</p>
+</blockquote>
+<h1 id="Unicode编码"><a href="#Unicode编码" class="headerlink" title="Unicode编码"></a>Unicode编码</h1><ul>
+<li><p>JS中用 <code>&#39;\u编码&#39;</code> 表示，此处编码为十六进制</p>
+</li>
+<li><p>HTML中用<code>&#39;&amp;#编码;&#39;</code>表示，此处编码为十进制</p>
+</li>
+</ul>
+<h1 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h1><p>对象属于一种复合的数据类型，在对象中可以保存多个不同数据类型的属性</p>
+<h2 id="对象分类"><a href="#对象分类" class="headerlink" title="对象分类"></a>对象分类</h2><ol>
+<li><p>内建对象</p>
+<ul>
+<li><p>由<code>ES</code>标准中定义的对象，在任何的<code>ES</code>的实现中都可以使用</p>
+</li>
+<li><p>比如:<code>Math String Number Boolean Function Object....</code></p>
+</li>
+</ul>
+</li>
+<li><p>宿主对象</p>
+<ul>
+<li><p>由<code>JS</code>的运行环境提供的对象，目前来讲主要指由浏览器提供的对象</p>
+</li>
+<li><p>比如 <code>BOM DOM</code></p>
+</li>
+</ul>
+</li>
+<li><p>自定义对象</p>
+<ul>
+<li>由开发人员自己创建的对象</li>
+</ul>
+</li>
+</ol>
+<h2 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h2><ol>
+<li><p>使用<code>new</code>关键字调用的函数，是构造函数<code>constructor</code></p>
+<p><code>var obj = new Object()</code></p>
+</li>
+<li><p>直接使用字面量赋值，同时可以添加属性</p>
+<p><code>var obj = { key：value[,key,value....] }</code></p>
+</li>
+<li><p>以工厂形式创建对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">create</span>(<span class="params">[属性值<span class="number">1</span>,....属性值N]</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">	obj.属性名<span class="number">1</span> = 属性值<span class="number">1</span>;</span><br><span class="line">	...</span><br><span class="line">	obj.属性名N = 属性值N;</span><br><span class="line">	<span class="keyword">return</span> obj;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//使用工厂方法创建的对象,使用的构造函数都是Object</span></span><br><span class="line"><span class="comment">//所以创建的对象都是Object类型</span></span><br><span class="line"><span class="comment">//就导致我们无法区分多种不同类型的对象</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>以自定义构造函数创建对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">构造函数和普通函数本质没有区别</span></span><br><span class="line"><span class="comment">不同的是构造函数的首字母习惯上大写</span></span><br><span class="line"><span class="comment">构造函数和普通函数的区别就是调用方式不同</span></span><br><span class="line"><span class="comment">构造函数需要用new 调用</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.属性名=属性值;</span><br><span class="line">    Fun.prototype.fun=<span class="built_in">Function</span>()&#123;</span><br><span class="line">    &#125;;			</span><br><span class="line">    <span class="comment">//方法若直接如属性一样赋值,当构造函数多次被调用时,会造成大量的内存浪费,每被调用一次就会生成一个相同的方法</span></span><br><span class="line">    <span class="comment">//所以给原型对象prototype添加方法,因为每个同类对象都公用一个prototype对象,需要共有的属性也可以用此方法	</span></span><br><span class="line">    <span class="comment">//访问属性或方法时,会先寻找类中(函数作用域)的名字,若没有,则去寻找prototype对象,所以若不想用prototype对象中的某个值,可以在类中用相同名字的变量覆盖</span></span><br><span class="line">		<span class="comment">//访问对象的prototype对象</span></span><br><span class="line">		对象.__proto__;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>构造函数的执行流程<ol>
+<li>立刻创建一个新的对象</li>
+<li>将新建对象设置为<code>this</code>，在构造函数中可以用<code>this</code>来引用新建的对象</li>
+<li>逐行执行函数中的代码</li>
+<li>将新建的对象返回</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>​    在对象中保存的值称为属性。</p>
+<ul>
+<li>向对象里添加（修改）属性<ul>
+<li><code>对象名.属性名=属性值</code></li>
+</ul>
+</li>
+<li>删除对象里的属性<ul>
+<li><code>delete 对象名.属性名</code></li>
+</ul>
+</li>
+<li>使用特殊的属性名，不能采用<code>.</code>的方式操作<ul>
+<li>应使用 <code>对象[&quot;属性名&quot;]=属性值</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="判断对象的属性和类的实例"><a href="#判断对象的属性和类的实例" class="headerlink" title="判断对象的属性和类的实例"></a>判断对象的属性和类的实例</h2><h3 id="判断对象存在属性"><a href="#判断对象存在属性" class="headerlink" title="判断对象存在属性"></a>判断对象存在属性</h3><p>​    使用<code>in</code>运算符可以判断对象内是否存在该属性(包括<code>prototype</code>对象中的属性)</p>
+<p>​    <code>&quot;属性名&quot; in 对象名</code> 返回布尔值</p>
+<p>​    若只想检查类中是否存在该属性(不去搜索<code>prototype</code>)，则可以使用对象的<code>hasOwnProperty()</code>方法，该方法存在于<code>prototype</code>原型对象中。该对象若没有此属性,则再去原型对象的原型对象中寻找,直到找到<code>Object</code>类中为止</p>
+<p>​    使用<code>for...in</code>语句枚举对象中的属性</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> 变量 <span class="keyword">in</span> 对象)&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(变量);<span class="comment">//输出所有属性名</span></span><br><span class="line">	<span class="built_in">console</span>.log(对象[变量])<span class="comment">//输出所有对应属性值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="判断是否为类的实例"><a href="#判断是否为类的实例" class="headerlink" title="判断是否为类的实例"></a>判断是否为类的实例</h3><p>使用<code>instanceof</code>检查一个对象是否是一个类的实例</p>
+<p><code>对象  instanceof  类</code>返回布尔值</p>
+<p><code>任何对象 instanceof Object</code>返回值都是<code>true</code>所有对象都是``Object`子类</p>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><ul>
+<li>函数也是一种对象(In fact，只要不是基本数据类型,都是对象)</li>
+<li>函数中可以封装一些功能(代码)，需要时可以执行这些功能(代码)</li>
+</ul>
+<h2 id="创建函数"><a href="#创建函数" class="headerlink" title="创建函数"></a>创建函数</h2><ul>
+<li><p>函数对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fun = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">"代码"</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>函数表达式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fun= <span class="function"><span class="keyword">function</span>(<span class="params">[形参<span class="number">1</span>,形参<span class="number">2.</span>..形参N]</span>)</span>&#123;</span><br><span class="line">	代码</span><br><span class="line">&#125;;<span class="comment">//因为是赋值,注意分号</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>函数声明</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">[形参<span class="number">1</span>,形参<span class="number">2.</span>..形参N]</span>)</span>&#123;</span><br><span class="line">	代码</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//形参相当于在函数中var了一堆undefined变量</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="调用函数"><a href="#调用函数" class="headerlink" title="调用函数"></a>调用函数</h2><p><code>fun([实参1,实参2...实参N]);</code></p>
+<ul>
+<li>调用函数时，浏览器会传递两个隐含的参数<ul>
+<li><code>this</code> 上下文对象</li>
+<li><code>arguments</code> 封装实参的类数组<ul>
+<li><code>arguments callee</code> 表示正在使用<code>arguments</code>的函数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>调用函数时，解析器不会检查实参的类型，实参可以是任何类型，如果有可能则需要对参数进行类型的检查</li>
+<li>调用函数时，解析器也不会检查实参的个数，多余的实参不会被使用，若实参个数少于形参个数，则没有对应实参的形参类型将会是<code>undefined</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fun.call([参数][实参,...])</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">	<span class="built_in">console</span>.log(a+b);</span><br><span class="line">&#125;</span><br><span class="line">sum.call(obj,<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line"><span class="comment">//将第一个参数作为函数作用域的this,之后的实参对应着函数的实参</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fun.apply([参数][实参,...])</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">	<span class="built_in">console</span>.log(a+b);</span><br><span class="line">&#125;</span><br><span class="line">sum.apply(obj,[<span class="number">1</span>,<span class="number">2</span>]);</span><br><span class="line"><span class="comment">//大部分与call()方法一样,但是实参需要用数组封装起来传递,而call()方法可以一个一个传递</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="函数的返回值"><a href="#函数的返回值" class="headerlink" title="函数的返回值"></a>函数的返回值</h2><ul>
+<li><code>return 值或变量或对象;</code></li>
+<li>函数将在<code>return</code>语句执行完后停止执行</li>
+<li>return后不写任何东西,返回<code>undefined</code></li>
+</ul>
+<h2 id="立即执行函数"><a href="#立即执行函数" class="headerlink" title="立即执行函数"></a>立即执行函数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">[形参<span class="number">1</span>,形参<span class="number">2.</span>..形参N]</span>)	</span>&#123;</span><br><span class="line">	代码</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="comment">//用括号将匿名函数变为整体,不然会报错</span></span><br><span class="line"><span class="comment">//往往这个函数只会被执行一次</span></span><br><span class="line"><span class="comment">//最后要加括号进行调用</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>​    作用域指一个变量作用的范围，<code>javascript</code>中一共有两种作用域</p>
+<ul>
+<li>全局作用域<ul>
+<li>直接写在<code>script</code>标签中的<code>JS</code>代码，都在全局作用域</li>
+<li>全局作用域在页面打开时创建，关闭时销毁</li>
+<li>在全局作用域中有个全局对象<code>window</code>，它代表我们浏览器的窗口，由浏览器创建，我们可以直接使用</li>
+<li>在全局作用域中<ul>
+<li>创建的变量都会作为<code>window</code>对象的属性保存</li>
+<li>创建的函数都会作为<code>window</code>对象的方法保存</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>函数作用域(局部作用域)<ul>
+<li>调用函数时,创建函数作用域,函数执行完毕后，作用域销毁</li>
+<li>每次调用会创建一个函数作用域，互相独立</li>
+<li>全局作用域无法访问函数作用域，反之可以</li>
+<li>在函数中访问时，会优先访问本作用域的变量，若没有，则向上一级作用域中寻找，若直到全局作用域都未找到，则会报错</li>
+<li>在函数中访问全局变量可以使用，<code>window.变量名</code></li>
+<li>在函数作用域中也有变量声明提前和函数声明提前的特性</li>
+</ul>
+</li>
+</ul>
+<h2 id="声明提前"><a href="#声明提前" class="headerlink" title="声明提前"></a>声明提前</h2><ul>
+<li>变量的声明提前<ul>
+<li>使用var关键字声明的变量,不论放在哪个位置，会在当前作用域所有的代码执行之前被声明,但是不会赋值，但是如果声明变量不使用var关键字，则变量不会被声明提前</li>
+</ul>
+</li>
+<li>函数的声明提前<ul>
+<li>使用函数声明形式创建的函数<code>function fun(){}</code>，它会在当前作用域所有代码执行之前被创建,所以我们可以在函数声明前调用。</li>
+<li>通过函数表达式创建的函数<code>var fun=function(){};</code>，<code>fun</code>这个变量会被声明，但不会被赋值,即类型是<code>undefined</code>，在函数赋值前用函数会报错</li>
+</ul>
+</li>
+</ul>
+<h1 id="this"><a href="#this" class="headerlink" title="this"></a>this</h1><p>​    解析器在调用函数每次都会向函数内部传递进一个隐含的参数。</p>
+<p>​    这个隐含的参数就是<code>this</code>，<code>this</code>指向的是一个对象。</p>
+<p>​    根据函数的调用方式不同，this会指向不同的对象。</p>
+<ul>
+<li>当以函数的形式调用时，this永远都是<code>window</code></li>
+<li>当以方法的形式调用时，this就是调用方法的那个对象</li>
+<li>其实函数的对象就是<code>window</code>，以上两点其实就是一点</li>
+<li>当以构造函数的形式调用时，this就是新建对象</li>
+</ul>
+<p>​    </p>
+<h1 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h1><p>简写：GC</p>
+<p>无法访问的对象就是垃圾</p>
+<p>垃圾自动会被清理掉</p>
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h2><ul>
+<li><p>构造函数</p>
+<p><code>var arr = new Array(1,2,3,4)</code></p>
+<p>若只传递一个参数，则该参数作为数组长度</p>
+</li>
+<li><p>字面量赋值</p>
+<p><code>var arr =[1,2,3...n]</code></p>
+<p>数组元素类型可以是任意类型</p>
+</li>
+</ul>
+<h2 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h2><ul>
+<li><code>数组[索引]=值</code></li>
+<li><code>数组.push(值[,值...])</code><ul>
+<li>从最后插入新元素，并返回新的长度</li>
+</ul>
+</li>
+<li><code>数组.unshift(值[,值...])</code><ul>
+<li>从最前面插入新元素，并返回新长度</li>
+</ul>
+</li>
+<li>设置或得到元素个数<ul>
+<li><code>数组.length[=个数]</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="数组方法"><a href="#数组方法" class="headerlink" title="数组方法"></a>数组方法</h2><ul>
+<li><p><code>push()</code></p>
+</li>
+<li><p><code>unshift()</code></p>
+</li>
+<li><p><code>pop()</code></p>
+<ul>
+<li>删除并返回数组最后一个元素</li>
+</ul>
+</li>
+<li><p><code>shift()</code></p>
+<ul>
+<li>删除并返回数组第一个元素</li>
+</ul>
+</li>
+<li><p><code>join()</code></p>
+<ul>
+<li>把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔</li>
+</ul>
+</li>
+<li><p><code>reverse()</code></p>
+<ul>
+<li>颠倒数组中元素的顺序。 会对原数组产生影响</li>
+</ul>
+</li>
+<li><p><code>slice(start,end)</code></p>
+<ul>
+<li>从某个已有的数组返回选定的元素 <code>start~end-1</code> 不对原数组造成影响</li>
+</ul>
+</li>
+<li><pre><code class="javascript">sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>{
+        <span class="keyword">return</span> a-b;<span class="comment">//降序</span>
+        <span class="keyword">return</span> b-a;<span class="comment">//升序</span>
+}) 
+&lt;!--￼<span class="number">9</span>--&gt;
+</code></pre>
+</li>
+</ul>
+<h1 id="Date对象"><a href="#Date对象" class="headerlink" title="Date对象"></a>Date对象</h1><h2 id="创建Date对象"><a href="#创建Date对象" class="headerlink" title="创建Date对象"></a>创建Date对象</h2><p><code>var d = new Date([&quot;月/日/年 时:分:秒&quot;])</code></p>
+<ul>
+<li>不传递参数时，<code>d</code>为当前日期</li>
+<li>传递参数则实设置为参数里的时间</li>
+</ul>
+<h2 id="Date对象方法"><a href="#Date对象方法" class="headerlink" title="Date对象方法"></a>Date对象方法</h2><ul>
+<li><code>getDate()</code><ul>
+<li>返回几日</li>
+</ul>
+</li>
+<li><code>getMonth()</code><ul>
+<li>返回月份<code>0-11</code>表示<code>1-12</code>月</li>
+</ul>
+</li>
+<li><code>getFullYear()</code><ul>
+<li>返回年份</li>
+</ul>
+</li>
+<li><code>getHours()</code><ul>
+<li>返回小时</li>
+</ul>
+</li>
+<li><code>getMinutes()</code><ul>
+<li>返回分钟</li>
+</ul>
+</li>
+<li><code>getSeconds()</code><ul>
+<li>返回秒钟</li>
+</ul>
+</li>
+<li><code>getTime()</code><ul>
+<li>获取当前对象的时间戳    格林威治时间<code>1970.01.01 00:00:00</code>到现在的毫秒数</li>
+</ul>
+</li>
+<li><code>Date.now()</code><ul>
+<li>返回此代码执行时的时间戳</li>
+</ul>
+</li>
+</ul>
+<h1 id="Math对象"><a href="#Math对象" class="headerlink" title="Math对象"></a>Math对象</h1><p>​    <code>Math</code>和其他的对象不同，它不是一个构造函数。</p>
+<p>​    它属于一个工具类，不用创建对象，它里边封装了数学运算相关的属性和方法。</p>
+<h2 id="常用属性"><a href="#常用属性" class="headerlink" title="常用属性"></a>常用属性</h2><ul>
+<li><code>PI</code>：圆周率</li>
+<li><code>E</code>：自然对数</li>
+</ul>
+<h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><ul>
+<li><code>cell()</code><ul>
+<li>对一个数进行向上取整</li>
+</ul>
+</li>
+<li><code>floor()</code><ul>
+<li>对一个数进行向上取整</li>
+</ul>
+</li>
+<li><code>round()</code><ul>
+<li>对一个数进行四舍五入</li>
+</ul>
+</li>
+<li><code>random()</code><ul>
+<li>产生一个随机数(0,1)</li>
+</ul>
+</li>
+<li><code>max()</code><ul>
+<li>返回多个数的最大值</li>
+</ul>
+</li>
+<li><code>min()</code><ul>
+<li>返回多个数的最小值</li>
+</ul>
+</li>
+<li><code>sqrt()</code><ul>
+<li>开方</li>
+</ul>
+</li>
+<li><code>pow(x,y)</code><ul>
+<li>返回x的y次方</li>
+</ul>
+</li>
+</ul>
+<h1 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h1><p><code>JS</code>中有三个包装类，可以将基本数据类型类型转换为对象。</p>
+<ul>
+<li><p><code>String()</code></p>
+<p><code>var str=new String(&quot;abcd&quot;)</code></p>
+</li>
+<li><p><code>Number()</code></p>
+<p><code>var num=new Number(3)</code></p>
+</li>
+<li><p><code>Boolean()</code></p>
+<p><code>var bool=new Boolean(&quot;true&quot;)</code></p>
+</li>
+</ul>
+<p>以上对象输出时，和基本数据类型完全一样，但是作为引用类型，所以无法比较，在开发中不会使用基本类型的对象。</p>
+<p>所以这些基本数据类型的包装类都是由<code>JS</code>自己使用,比如：当我们对一个基本数据类型调用<code>toString()</code>方法时，浏览器自动将其临时封装为对象。</p>
+<h1 id="字符串的相关方法"><a href="#字符串的相关方法" class="headerlink" title="字符串的相关方法"></a>字符串的相关方法</h1><p>字符串在底层以字符数组的形式保存。</p>
+<ul>
+<li><p><code>charAt(index)</code></p>
+<ul>
+<li>相当于<code>[index]</code></li>
+</ul>
+</li>
+<li><p><code>charCodeAt(index)</code></p>
+<ul>
+<li>返回<code>index</code>位置字符的<code>Unicode</code>编码</li>
+</ul>
+</li>
+<li><p><code>String.fromCharCode(code)</code></p>
+<ul>
+<li>通过<code>Unicode</code>编码返回字符</li>
+</ul>
+</li>
+<li><p><code>concat()</code></p>
+<ul>
+<li>连接字符串 类似于<code>+</code></li>
+</ul>
+</li>
+<li><p><code>indexOf(&#39;&#39;,start)</code></p>
+<ul>
+<li>从<code>start</code>位置开始(不写默认为<code>0</code>)返回参数字符第一出现的索引，未找到则返回<code>-1</code></li>
+</ul>
+</li>
+<li><p><code>lastIndexOf(&#39;&#39;,start)</code></p>
+<ul>
+<li>同上，只是从后往前寻找</li>
+</ul>
+</li>
+<li><p><code>slice(start,end)</code></p>
+<ul>
+<li>同数组，截取部分字符串，不包括<code>end</code>，<code>end</code>可以为负数，若省略end则截取从<code>start</code>开始全部字符串</li>
+</ul>
+</li>
+<li><p><code>substring(start,end)</code></p>
+<ul>
+<li>同上，但不接受负数，如果<code>end</code>小于<code>start</code>，则会自动交换位置，也不对原字符串造成影响</li>
+</ul>
+</li>
+<li><p><code>substr(start,count)</code></p>
+<ul>
+<li>从<code>start</code>位置开始截取<code>count</code>个字符的字符串，该方法没有再<code>ES</code>标准中定义，但是浏览器都支持，不对原字符串造成影响</li>
+</ul>
+</li>
+<li><p><code>split(str)</code></p>
+<ul>
+<li>以<code>str</code>为依据分割,将一个字符串拆分为一个数组，传入空串则分割每个字符</li>
+</ul>
+</li>
+<li><p><code>toLowerCase()</code></p>
+<ul>
+<li>将字符串转换为小写并返回 不影响原</li>
+</ul>
+</li>
+<li><p><code>toUpperCase()</code></p>
+<ul>
+<li>将字符串转换为大写并返回 不影响原</li>
+</ul>
+</li>
+</ul>
+<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><p>​    用于定义一些字符串的规则。</p>
+<p>​    计算机可以根据正则表达式，来检查一个字符串是否符合规则，区分大小写。</p>
+<p>​    将字符串中符合规则的内容提取出来。</p>
+<h2 id="创建正则表达式的对象"><a href="#创建正则表达式的对象" class="headerlink" title="创建正则表达式的对象"></a>创建正则表达式的对象</h2><ul>
+<li><code>var 变量 = new RegExp(&quot;正则表达式&quot;,&quot;匹配模式&quot;)</code></li>
+<li><code>var 变量 = /正则表达式/匹配模式</code><ul>
+<li>无双引号</li>
+</ul>
+</li>
+<li>匹配模式不写，则默认模式为字符串是否包含”正则表达式”</li>
+</ul>
+<p>匹配模式</p>
+<ul>
+<li><code>i</code>：忽略大小写</li>
+<li><code>g</code>：全局匹配</li>
+</ul>
+<h2 id="正则表达式模式"><a href="#正则表达式模式" class="headerlink" title="正则表达式模式"></a>正则表达式模式</h2><p> 方括号用于查找某个范围内的字符 </p>
+<table>
+<thead>
+<tr>
+<th align="center">表达式</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>[abc\]</code></td>
+<td align="center">查找方括号之间的任何字符。</td>
+</tr>
+<tr>
+<td align="center"><code>[^abc\]</code></td>
+<td align="center">查找任何不在方括号之间的字符。</td>
+</tr>
+<tr>
+<td align="center"><code>[0-9]</code></td>
+<td align="center">查找任何从 <code>0 至 9</code> 的数字。</td>
+</tr>
+<tr>
+<td align="center"><code>[a-z]</code></td>
+<td align="center">查找任何从<code>小写 a 到小写 z</code> 的字符。</td>
+</tr>
+<tr>
+<td align="center"><code>[A-Z]</code></td>
+<td align="center">查找任何从<code>大写 A 到大写 Z</code> 的字符。</td>
+</tr>
+<tr>
+<td align="center"><code>[A-z]</code></td>
+<td align="center">查找任何从<code>大写 A 到小写 z</code> 的字符。</td>
+</tr>
+<tr>
+<td align="center"><code>[adgk]</code></td>
+<td align="center">查找给定集合内的任何字符。</td>
+</tr>
+<tr>
+<td align="center"><code>[^adgk]</code></td>
+<td align="center">查找给定集合外的任何字符。</td>
+</tr>
+<tr>
+<td align="center">`(red</td>
+<td align="center">blue</td>
+</tr>
+</tbody></table>
+<p> 元字符是拥有特殊含义的字符 </p>
+<table>
+<thead>
+<tr>
+<th align="center">元字符</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>.</code></td>
+<td align="center">查找单个字符，除了换行和行结束符。</td>
+</tr>
+<tr>
+<td align="center"><code>\w</code></td>
+<td align="center">查找单词字符。</td>
+</tr>
+<tr>
+<td align="center"><code>\W</code></td>
+<td align="center">查找非单词字符。</td>
+</tr>
+<tr>
+<td align="center"><code>\d</code></td>
+<td align="center">查找数字。</td>
+</tr>
+<tr>
+<td align="center"><code>\D</code></td>
+<td align="center">查找非数字字符。</td>
+</tr>
+<tr>
+<td align="center"><code>\s</code></td>
+<td align="center">查找空白字符。</td>
+</tr>
+<tr>
+<td align="center"><code>\S</code></td>
+<td align="center">查找非空白字符。</td>
+</tr>
+<tr>
+<td align="center"><code>\b</code></td>
+<td align="center">匹配单词边界。</td>
+</tr>
+<tr>
+<td align="center"><code>\B</code></td>
+<td align="center">匹配非单词边界。</td>
+</tr>
+<tr>
+<td align="center"><code>\0</code></td>
+<td align="center">查找 <code>NULL</code>字符。</td>
+</tr>
+<tr>
+<td align="center"><code>\n</code></td>
+<td align="center">查找换行符。</td>
+</tr>
+<tr>
+<td align="center"><code>\f</code></td>
+<td align="center">查找换页符。</td>
+</tr>
+<tr>
+<td align="center"><code>\r</code></td>
+<td align="center">查找回车符。</td>
+</tr>
+<tr>
+<td align="center"><code>\t</code></td>
+<td align="center">查找制表符。</td>
+</tr>
+<tr>
+<td align="center"><code>\v</code></td>
+<td align="center">查找垂直制表符。</td>
+</tr>
+<tr>
+<td align="center"><code>\xxx</code></td>
+<td align="center">查找以八进制数 <code>xxx</code>规定的字符。</td>
+</tr>
+<tr>
+<td align="center"><code>\xdd</code></td>
+<td align="center">查找以十六进制数 <code>dd</code>规定的字符。</td>
+</tr>
+<tr>
+<td align="center"><code>\uxxxx</code></td>
+<td align="center">查找以十六进制数 <code>xxxx</code>规定的 <code>Unicode</code>字符。</td>
+</tr>
+</tbody></table>
+<p> 量词 </p>
+<table>
+<thead>
+<tr>
+<th align="center">量词</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>n+</code></td>
+<td align="center">匹配任何包含至少一个 <code>n</code> 的字符串。例如，<code>/a+/</code> 匹配 <code>&quot;candy&quot;</code> 中的 <code>&quot;a&quot;</code>，<code>&quot;caaaaaaandy&quot;</code> 中所有的 <code>&quot;a&quot;</code>。</td>
+</tr>
+<tr>
+<td align="center"><code>n*</code></td>
+<td align="center">匹配任何包含零个或多个 <code>n</code> 的字符串。例如，<code>/bo*/</code> 匹配<code>&quot;A ghost booooed&quot;</code>中的 <code>&quot;boooo&quot;</code>，<code>&quot;A bird warbled&quot;</code> 中的 <code>&quot;b&quot;</code>，但是不匹配 <code>&quot;A goat grunted&quot;</code>。</td>
+</tr>
+<tr>
+<td align="center"><code>n?</code></td>
+<td align="center">匹配任何包含零个或一个 <code>n</code> 的字符串。例如，<code>/e?le?/</code> 匹配 <code>&quot;angel&quot;</code> 中的 <code>&quot;el&quot;</code>，<code>&quot;angle&quot;</code> 中的<code>&quot;le&quot;</code>。</td>
+</tr>
+<tr>
+<td align="center"><code>n{X}</code></td>
+<td align="center">匹配包含 <code>X</code>个 <code>n</code> 的序列的字符串。例如，<code>/a{2}/</code>不匹配 <code>&quot;candy,&quot;</code> 中的 <code>&quot;a&quot;</code>，但是匹配<code>&quot;caandy,&quot;</code> 中的两个 <code>&quot;a&quot;</code>，且匹配 <code>&quot;caaandy.&quot;</code> 中的前两个 <code>&quot;a&quot;</code>。</td>
+</tr>
+<tr>
+<td align="center"><code>n{X,}</code></td>
+<td align="center"><code>X</code>是一个正整数。前面的模式 <code>n</code> 连续出现至少<code>X</code> 次时匹配。例如，<code>/a{2,}/</code> 不匹配<code>&quot;candy&quot;</code> 中的 <code>&quot;a&quot;</code>，但是匹配 <code>&quot;caandy&quot;</code> 和 <code>&quot;caaaaaaandy.&quot;</code> 中所有的 <code>&quot;a&quot;</code>。</td>
+</tr>
+<tr>
+<td align="center"><code>n{X,Y}</code></td>
+<td align="center"><code>X</code> 和 <code>Y</code> 为正整数。前面的模式 <code>n</code> 连续出现至少<code>X</code> 次，至多 <code>Y</code> 次时匹配。例如，<code>/a{1,3}/</code> 不匹配 <code>&quot;cndy&quot;</code>，匹配 <code>&quot;candy,&quot;</code> 中的 <code>&quot;a&quot;</code>，<code>&quot;caandy,&quot;</code> 中的两个 <code>&quot;a&quot;</code>，匹配 <code>&quot;caaaaaaandy&quot;</code> 中的前面三个 <code>&quot;a&quot;</code>。注意，当匹配 <code>&quot;caaaaaaandy&quot;</code> 时，即使原始字符串拥有更多的 <code>&quot;a&quot;</code>，匹配项也是 <code>&quot;aaa&quot;</code>。</td>
+</tr>
+<tr>
+<td align="center"><code>n$</code></td>
+<td align="center">匹配任何结尾为 <code>n</code> 的字符串。</td>
+</tr>
+<tr>
+<td align="center"><code>^n</code></td>
+<td align="center">匹配任何开头为 <code>n</code> 的字符串。</td>
+</tr>
+<tr>
+<td align="center"><code>?=n</code></td>
+<td align="center">匹配任何其后紧接指定字符串 <code>n</code> 的字符串。</td>
+</tr>
+<tr>
+<td align="center"><code>?!n</code></td>
+<td align="center">匹配任何其后没有紧接指定字符串 <code>n</code> 的字符串。</td>
+</tr>
+</tbody></table>
+<h2 id="RegExp-对象方法"><a href="#RegExp-对象方法" class="headerlink" title="RegExp 对象方法"></a>RegExp 对象方法</h2><table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>compile</code></td>
+<td align="center">在 1.5 版本中已废弃。 编译正则表达式。</td>
+</tr>
+<tr>
+<td align="center"><code>exec</code></td>
+<td align="center">检索字符串中指定的值。返回找到的值，并确定其位置。</td>
+</tr>
+<tr>
+<td align="center"><code>test</code></td>
+<td align="center">检索字符串中指定的值。返回 <code>true</code>或 <code>false</code>。</td>
+</tr>
+<tr>
+<td align="center"><code>toString</code></td>
+<td align="center">返回正则表达式的字符串。</td>
+</tr>
+</tbody></table>
+<h2 id="支持正则表达式的-String-对象的方法"><a href="#支持正则表达式的-String-对象的方法" class="headerlink" title="支持正则表达式的 String 对象的方法"></a>支持正则表达式的 String 对象的方法</h2><table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">描述</th>
+<th align="center">FF</th>
+<th align="center">IE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>search</code></td>
+<td align="center">检索与正则表达式相匹配的值。</td>
+<td align="center">1</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center"><code>match</code></td>
+<td align="center">找到一个或多个正则表达式的匹配。</td>
+<td align="center">1</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center"><code>replace</code></td>
+<td align="center">替换与正则表达式匹配的子串。</td>
+<td align="center">1</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center"><code>split</code></td>
+<td align="center">把字符串分割为字符串数组。</td>
+<td align="center">1</td>
+<td align="center">4</td>
+</tr>
+</tbody></table>
+<h2 id="RegExp-对象属性"><a href="#RegExp-对象属性" class="headerlink" title="RegExp 对象属性"></a>RegExp 对象属性</h2><table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>constructor</code></td>
+<td align="center">返回一个函数，该函数是一个创建 <code>RegExp</code>对象的原型。</td>
+</tr>
+<tr>
+<td align="center"><code>global</code></td>
+<td align="center">判断是否设置了 <code>&quot;g&quot;</code> 修饰符</td>
+</tr>
+<tr>
+<td align="center"><code>ignoreCase</code></td>
+<td align="center">判断是否设置了 <code>&quot;i&quot;</code> 修饰符</td>
+</tr>
+<tr>
+<td align="center"><code>lastIndex</code></td>
+<td align="center">用于规定下次匹配的起始位置</td>
+</tr>
+<tr>
+<td align="center"><code>multiline</code></td>
+<td align="center">判断是否设置了 <code>&quot;m&quot;</code> 修饰符</td>
+</tr>
+<tr>
+<td align="center"><code>source</code></td>
+<td align="center">返回正则表达式的匹配模式</td>
+</tr>
+</tbody></table>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wxpay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Javascript/" class="article-tag-list-link color1">Javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2020/05/03/JS%E5%9F%BA%E7%A1%801/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/05/03/JS%E5%9F%BA%E7%A1%802/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          JS基础2
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/05/03/JQuery/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JQuery</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
+  
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2020 w-Volcano
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true,
+		showTags: true
+	}
+</script>
+
+<script>!function(t){function n(r){if(e[r])return e[r].exports;var o=e[r]={exports:{},id:r,loaded:!1};return t[r].call(o.exports,o,o.exports,n),o.loaded=!0,o.exports}var e={};return n.m=t,n.c=e,n.p="./",n(0)}([function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}function o(t,n){var e=/\/|index.html/g;return t.replace(e,"")===n.replace(e,"")}function i(){for(var t=document.querySelectorAll(".js-header-menu li a"),n=window.location.pathname,e=0,r=t.length;e<r;e++){var i=t[e];o(n,i.getAttribute("href"))&&(0,d.default)(i,"active")}}function u(t){for(var n=t.offsetLeft,e=t.offsetParent;null!==e;)n+=e.offsetLeft,e=e.offsetParent;return n}function f(t){for(var n=t.offsetTop,e=t.offsetParent;null!==e;)n+=e.offsetTop,e=e.offsetParent;return n}function c(t,n,e,r,o){var i=u(t),c=f(t)-n;if(c-e<=o){var a=t.$newDom;a||(a=t.cloneNode(!0),(0,h.default)(t,a),t.$newDom=a,a.style.position="fixed",a.style.top=(e||c)+"px",a.style.left=i+"px",a.style.zIndex=r||2,a.style.width="100%",a.style.color="#fff"),a.style.visibility="visible",t.style.visibility="hidden"}else{t.style.visibility="visible";var s=t.$newDom;s&&(s.style.visibility="hidden")}}function a(){var t=document.querySelector(".js-overlay"),n=document.querySelector(".js-header-menu");c(t,document.body.scrollTop,-63,2,0),c(n,document.body.scrollTop,1,3,0)}function s(){document.querySelector("#container").addEventListener("scroll",function(t){a()}),window.addEventListener("scroll",function(t){a()}),a()}function l(){x.default.versions.mobile&&window.screen.width<800&&(i(),s())}var p=e(71),d=r(p),v=e(72),y=(r(v),e(84)),h=r(y),b=e(69),x=r(b),m=e(75),g=r(m),w=e(70);l(),(0,w.addLoadEvent)(function(){g.default.init()}),t.exports={}},function(t,n){var e=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=e)},function(t,n){var e={}.hasOwnProperty;t.exports=function(t,n){return e.call(t,n)}},function(t,n,e){var r=e(49),o=e(15);t.exports=function(t){return r(o(t))}},function(t,n,e){t.exports=!e(8)(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},function(t,n,e){var r=e(6),o=e(12);t.exports=e(4)?function(t,n,e){return r.f(t,n,o(1,e))}:function(t,n,e){return t[n]=e,t}},function(t,n,e){var r=e(10),o=e(30),i=e(24),u=Object.defineProperty;n.f=e(4)?Object.defineProperty:function(t,n,e){if(r(t),n=i(n,!0),r(e),o)try{return u(t,n,e)}catch(t){}if("get"in e||"set"in e)throw TypeError("Accessors not supported!");return"value"in e&&(t[n]=e.value),t}},function(t,n,e){var r=e(22)("wks"),o=e(13),i=e(1).Symbol,u="function"==typeof i,f=t.exports=function(t){return r[t]||(r[t]=u&&i[t]||(u?i:o)("Symbol."+t))};f.store=r},function(t,n){t.exports=function(t){try{return!!t()}catch(t){return!0}}},function(t,n,e){var r=e(35),o=e(16);t.exports=Object.keys||function(t){return r(t,o)}},function(t,n,e){var r=e(11);t.exports=function(t){if(!r(t))throw TypeError(t+" is not an object!");return t}},function(t,n){t.exports=function(t){return"object"==typeof t?null!==t:"function"==typeof t}},function(t,n){t.exports=function(t,n){return{enumerable:!(1&t),configurable:!(2&t),writable:!(4&t),value:n}}},function(t,n){var e=0,r=Math.random();t.exports=function(t){return"Symbol(".concat(void 0===t?"":t,")_",(++e+r).toString(36))}},function(t,n){var e=t.exports={version:"2.4.0"};"number"==typeof __e&&(__e=e)},function(t,n){t.exports=function(t){if(void 0==t)throw TypeError("Can't call method on  "+t);return t}},function(t,n){t.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},function(t,n){t.exports={}},function(t,n){t.exports=!0},function(t,n){n.f={}.propertyIsEnumerable},function(t,n,e){var r=e(6).f,o=e(2),i=e(7)("toStringTag");t.exports=function(t,n,e){t&&!o(t=e?t:t.prototype,i)&&r(t,i,{configurable:!0,value:n})}},function(t,n,e){var r=e(22)("keys"),o=e(13);t.exports=function(t){return r[t]||(r[t]=o(t))}},function(t,n,e){var r=e(1),o="__core-js_shared__",i=r[o]||(r[o]={});t.exports=function(t){return i[t]||(i[t]={})}},function(t,n){var e=Math.ceil,r=Math.floor;t.exports=function(t){return isNaN(t=+t)?0:(t>0?r:e)(t)}},function(t,n,e){var r=e(11);t.exports=function(t,n){if(!r(t))return t;var e,o;if(n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;if("function"==typeof(e=t.valueOf)&&!r(o=e.call(t)))return o;if(!n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;throw TypeError("Can't convert object to primitive value")}},function(t,n,e){var r=e(1),o=e(14),i=e(18),u=e(26),f=e(6).f;t.exports=function(t){var n=o.Symbol||(o.Symbol=i?{}:r.Symbol||{});"_"==t.charAt(0)||t in n||f(n,t,{value:u.f(t)})}},function(t,n,e){n.f=e(7)},function(t,n,e){var r=e(1),o=e(14),i=e(46),u=e(5),f="prototype",c=function(t,n,e){var a,s,l,p=t&c.F,d=t&c.G,v=t&c.S,y=t&c.P,h=t&c.B,b=t&c.W,x=d?o:o[n]||(o[n]={}),m=x[f],g=d?r:v?r[n]:(r[n]||{})[f];d&&(e=n);for(a in e)s=!p&&g&&void 0!==g[a],s&&a in x||(l=s?g[a]:e[a],x[a]=d&&"function"!=typeof g[a]?e[a]:h&&s?i(l,r):b&&g[a]==l?function(t){var n=function(n,e,r){if(this instanceof t){switch(arguments.length){case 0:return new t;case 1:return new t(n);case 2:return new t(n,e)}return new t(n,e,r)}return t.apply(this,arguments)};return n[f]=t[f],n}(l):y&&"function"==typeof l?i(Function.call,l):l,y&&((x.virtual||(x.virtual={}))[a]=l,t&c.R&&m&&!m[a]&&u(m,a,l)))};c.F=1,c.G=2,c.S=4,c.P=8,c.B=16,c.W=32,c.U=64,c.R=128,t.exports=c},function(t,n){var e={}.toString;t.exports=function(t){return e.call(t).slice(8,-1)}},function(t,n,e){var r=e(11),o=e(1).document,i=r(o)&&r(o.createElement);t.exports=function(t){return i?o.createElement(t):{}}},function(t,n,e){t.exports=!e(4)&&!e(8)(function(){return 7!=Object.defineProperty(e(29)("div"),"a",{get:function(){return 7}}).a})},function(t,n,e){"use strict";var r=e(18),o=e(27),i=e(36),u=e(5),f=e(2),c=e(17),a=e(51),s=e(20),l=e(58),p=e(7)("iterator"),d=!([].keys&&"next"in[].keys()),v="@@iterator",y="keys",h="values",b=function(){return this};t.exports=function(t,n,e,x,m,g,w){a(e,n,x);var O,S,_,j=function(t){if(!d&&t in A)return A[t];switch(t){case y:return function(){return new e(this,t)};case h:return function(){return new e(this,t)}}return function(){return new e(this,t)}},P=n+" Iterator",E=m==h,M=!1,A=t.prototype,T=A[p]||A[v]||m&&A[m],L=T||j(m),N=m?E?j("entries"):L:void 0,C="Array"==n?A.entries||T:T;if(C&&(_=l(C.call(new t)),_!==Object.prototype&&(s(_,P,!0),r||f(_,p)||u(_,p,b))),E&&T&&T.name!==h&&(M=!0,L=function(){return T.call(this)}),r&&!w||!d&&!M&&A[p]||u(A,p,L),c[n]=L,c[P]=b,m)if(O={values:E?L:j(h),keys:g?L:j(y),entries:N},w)for(S in O)S in A||i(A,S,O[S]);else o(o.P+o.F*(d||M),n,O);return O}},function(t,n,e){var r=e(10),o=e(55),i=e(16),u=e(21)("IE_PROTO"),f=function(){},c="prototype",a=function(){var t,n=e(29)("iframe"),r=i.length,o="<",u=">";for(n.style.display="none",e(48).appendChild(n),n.src="javascript:",t=n.contentWindow.document,t.open(),t.write(o+"script"+u+"document.F=Object"+o+"/script"+u),t.close(),a=t.F;r--;)delete a[c][i[r]];return a()};t.exports=Object.create||function(t,n){var e;return null!==t?(f[c]=r(t),e=new f,f[c]=null,e[u]=t):e=a(),void 0===n?e:o(e,n)}},function(t,n,e){var r=e(35),o=e(16).concat("length","prototype");n.f=Object.getOwnPropertyNames||function(t){return r(t,o)}},function(t,n){n.f=Object.getOwnPropertySymbols},function(t,n,e){var r=e(2),o=e(3),i=e(45)(!1),u=e(21)("IE_PROTO");t.exports=function(t,n){var e,f=o(t),c=0,a=[];for(e in f)e!=u&&r(f,e)&&a.push(e);for(;n.length>c;)r(f,e=n[c++])&&(~i(a,e)||a.push(e));return a}},function(t,n,e){t.exports=e(5)},function(t,n,e){var r=e(15);t.exports=function(t){return Object(r(t))}},function(t,n,e){t.exports={default:e(41),__esModule:!0}},function(t,n,e){t.exports={default:e(42),__esModule:!0}},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}n.__esModule=!0;var o=e(39),i=r(o),u=e(38),f=r(u),c="function"==typeof f.default&&"symbol"==typeof i.default?function(t){return typeof t}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":typeof t};n.default="function"==typeof f.default&&"symbol"===c(i.default)?function(t){return"undefined"==typeof t?"undefined":c(t)}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":"undefined"==typeof t?"undefined":c(t)}},function(t,n,e){e(65),e(63),e(66),e(67),t.exports=e(14).Symbol},function(t,n,e){e(64),e(68),t.exports=e(26).f("iterator")},function(t,n){t.exports=function(t){if("function"!=typeof t)throw TypeError(t+" is not a function!");return t}},function(t,n){t.exports=function(){}},function(t,n,e){var r=e(3),o=e(61),i=e(60);t.exports=function(t){return function(n,e,u){var f,c=r(n),a=o(c.length),s=i(u,a);if(t&&e!=e){for(;a>s;)if(f=c[s++],f!=f)return!0}else for(;a>s;s++)if((t||s in c)&&c[s]===e)return t||s||0;return!t&&-1}}},function(t,n,e){var r=e(43);t.exports=function(t,n,e){if(r(t),void 0===n)return t;switch(e){case 1:return function(e){return t.call(n,e)};case 2:return function(e,r){return t.call(n,e,r)};case 3:return function(e,r,o){return t.call(n,e,r,o)}}return function(){return t.apply(n,arguments)}}},function(t,n,e){var r=e(9),o=e(34),i=e(19);t.exports=function(t){var n=r(t),e=o.f;if(e)for(var u,f=e(t),c=i.f,a=0;f.length>a;)c.call(t,u=f[a++])&&n.push(u);return n}},function(t,n,e){t.exports=e(1).document&&document.documentElement},function(t,n,e){var r=e(28);t.exports=Object("z").propertyIsEnumerable(0)?Object:function(t){return"String"==r(t)?t.split(""):Object(t)}},function(t,n,e){var r=e(28);t.exports=Array.isArray||function(t){return"Array"==r(t)}},function(t,n,e){"use strict";var r=e(32),o=e(12),i=e(20),u={};e(5)(u,e(7)("iterator"),function(){return this}),t.exports=function(t,n,e){t.prototype=r(u,{next:o(1,e)}),i(t,n+" Iterator")}},function(t,n){t.exports=function(t,n){return{value:n,done:!!t}}},function(t,n,e){var r=e(9),o=e(3);t.exports=function(t,n){for(var e,i=o(t),u=r(i),f=u.length,c=0;f>c;)if(i[e=u[c++]]===n)return e}},function(t,n,e){var r=e(13)("meta"),o=e(11),i=e(2),u=e(6).f,f=0,c=Object.isExtensible||function(){return!0},a=!e(8)(function(){return c(Object.preventExtensions({}))}),s=function(t){u(t,r,{value:{i:"O"+ ++f,w:{}}})},l=function(t,n){if(!o(t))return"symbol"==typeof t?t:("string"==typeof t?"S":"P")+t;if(!i(t,r)){if(!c(t))return"F";if(!n)return"E";s(t)}return t[r].i},p=function(t,n){if(!i(t,r)){if(!c(t))return!0;if(!n)return!1;s(t)}return t[r].w},d=function(t){return a&&v.NEED&&c(t)&&!i(t,r)&&s(t),t},v=t.exports={KEY:r,NEED:!1,fastKey:l,getWeak:p,onFreeze:d}},function(t,n,e){var r=e(6),o=e(10),i=e(9);t.exports=e(4)?Object.defineProperties:function(t,n){o(t);for(var e,u=i(n),f=u.length,c=0;f>c;)r.f(t,e=u[c++],n[e]);return t}},function(t,n,e){var r=e(19),o=e(12),i=e(3),u=e(24),f=e(2),c=e(30),a=Object.getOwnPropertyDescriptor;n.f=e(4)?a:function(t,n){if(t=i(t),n=u(n,!0),c)try{return a(t,n)}catch(t){}if(f(t,n))return o(!r.f.call(t,n),t[n])}},function(t,n,e){var r=e(3),o=e(33).f,i={}.toString,u="object"==typeof window&&window&&Object.getOwnPropertyNames?Object.getOwnPropertyNames(window):[],f=function(t){try{return o(t)}catch(t){return u.slice()}};t.exports.f=function(t){return u&&"[object Window]"==i.call(t)?f(t):o(r(t))}},function(t,n,e){var r=e(2),o=e(37),i=e(21)("IE_PROTO"),u=Object.prototype;t.exports=Object.getPrototypeOf||function(t){return t=o(t),r(t,i)?t[i]:"function"==typeof t.constructor&&t instanceof t.constructor?t.constructor.prototype:t instanceof Object?u:null}},function(t,n,e){var r=e(23),o=e(15);t.exports=function(t){return function(n,e){var i,u,f=String(o(n)),c=r(e),a=f.length;return c<0||c>=a?t?"":void 0:(i=f.charCodeAt(c),i<55296||i>56319||c+1===a||(u=f.charCodeAt(c+1))<56320||u>57343?t?f.charAt(c):i:t?f.slice(c,c+2):(i-55296<<10)+(u-56320)+65536)}}},function(t,n,e){var r=e(23),o=Math.max,i=Math.min;t.exports=function(t,n){return t=r(t),t<0?o(t+n,0):i(t,n)}},function(t,n,e){var r=e(23),o=Math.min;t.exports=function(t){return t>0?o(r(t),9007199254740991):0}},function(t,n,e){"use strict";var r=e(44),o=e(52),i=e(17),u=e(3);t.exports=e(31)(Array,"Array",function(t,n){this._t=u(t),this._i=0,this._k=n},function(){var t=this._t,n=this._k,e=this._i++;return!t||e>=t.length?(this._t=void 0,o(1)):"keys"==n?o(0,e):"values"==n?o(0,t[e]):o(0,[e,t[e]])},"values"),i.Arguments=i.Array,r("keys"),r("values"),r("entries")},function(t,n){},function(t,n,e){"use strict";var r=e(59)(!0);e(31)(String,"String",function(t){this._t=String(t),this._i=0},function(){var t,n=this._t,e=this._i;return e>=n.length?{value:void 0,done:!0}:(t=r(n,e),this._i+=t.length,{value:t,done:!1})})},function(t,n,e){"use strict";var r=e(1),o=e(2),i=e(4),u=e(27),f=e(36),c=e(54).KEY,a=e(8),s=e(22),l=e(20),p=e(13),d=e(7),v=e(26),y=e(25),h=e(53),b=e(47),x=e(50),m=e(10),g=e(3),w=e(24),O=e(12),S=e(32),_=e(57),j=e(56),P=e(6),E=e(9),M=j.f,A=P.f,T=_.f,L=r.Symbol,N=r.JSON,C=N&&N.stringify,k="prototype",F=d("_hidden"),q=d("toPrimitive"),I={}.propertyIsEnumerable,B=s("symbol-registry"),D=s("symbols"),W=s("op-symbols"),H=Object[k],K="function"==typeof L,R=r.QObject,J=!R||!R[k]||!R[k].findChild,U=i&&a(function(){return 7!=S(A({},"a",{get:function(){return A(this,"a",{value:7}).a}})).a})?function(t,n,e){var r=M(H,n);r&&delete H[n],A(t,n,e),r&&t!==H&&A(H,n,r)}:A,G=function(t){var n=D[t]=S(L[k]);return n._k=t,n},$=K&&"symbol"==typeof L.iterator?function(t){return"symbol"==typeof t}:function(t){return t instanceof L},z=function(t,n,e){return t===H&&z(W,n,e),m(t),n=w(n,!0),m(e),o(D,n)?(e.enumerable?(o(t,F)&&t[F][n]&&(t[F][n]=!1),e=S(e,{enumerable:O(0,!1)})):(o(t,F)||A(t,F,O(1,{})),t[F][n]=!0),U(t,n,e)):A(t,n,e)},Y=function(t,n){m(t);for(var e,r=b(n=g(n)),o=0,i=r.length;i>o;)z(t,e=r[o++],n[e]);return t},Q=function(t,n){return void 0===n?S(t):Y(S(t),n)},X=function(t){var n=I.call(this,t=w(t,!0));return!(this===H&&o(D,t)&&!o(W,t))&&(!(n||!o(this,t)||!o(D,t)||o(this,F)&&this[F][t])||n)},V=function(t,n){if(t=g(t),n=w(n,!0),t!==H||!o(D,n)||o(W,n)){var e=M(t,n);return!e||!o(D,n)||o(t,F)&&t[F][n]||(e.enumerable=!0),e}},Z=function(t){for(var n,e=T(g(t)),r=[],i=0;e.length>i;)o(D,n=e[i++])||n==F||n==c||r.push(n);return r},tt=function(t){for(var n,e=t===H,r=T(e?W:g(t)),i=[],u=0;r.length>u;)!o(D,n=r[u++])||e&&!o(H,n)||i.push(D[n]);return i};K||(L=function(){if(this instanceof L)throw TypeError("Symbol is not a constructor!");var t=p(arguments.length>0?arguments[0]:void 0),n=function(e){this===H&&n.call(W,e),o(this,F)&&o(this[F],t)&&(this[F][t]=!1),U(this,t,O(1,e))};return i&&J&&U(H,t,{configurable:!0,set:n}),G(t)},f(L[k],"toString",function(){return this._k}),j.f=V,P.f=z,e(33).f=_.f=Z,e(19).f=X,e(34).f=tt,i&&!e(18)&&f(H,"propertyIsEnumerable",X,!0),v.f=function(t){return G(d(t))}),u(u.G+u.W+u.F*!K,{Symbol:L});for(var nt="hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(","),et=0;nt.length>et;)d(nt[et++]);for(var nt=E(d.store),et=0;nt.length>et;)y(nt[et++]);u(u.S+u.F*!K,"Symbol",{for:function(t){return o(B,t+="")?B[t]:B[t]=L(t)},keyFor:function(t){if($(t))return h(B,t);throw TypeError(t+" is not a symbol!")},useSetter:function(){J=!0},useSimple:function(){J=!1}}),u(u.S+u.F*!K,"Object",{create:Q,defineProperty:z,defineProperties:Y,getOwnPropertyDescriptor:V,getOwnPropertyNames:Z,getOwnPropertySymbols:tt}),N&&u(u.S+u.F*(!K||a(function(){var t=L();return"[null]"!=C([t])||"{}"!=C({a:t})||"{}"!=C(Object(t))})),"JSON",{stringify:function(t){if(void 0!==t&&!$(t)){for(var n,e,r=[t],o=1;arguments.length>o;)r.push(arguments[o++]);return n=r[1],"function"==typeof n&&(e=n),!e&&x(n)||(n=function(t,n){if(e&&(n=e.call(this,t,n)),!$(n))return n}),r[1]=n,C.apply(N,r)}}}),L[k][q]||e(5)(L[k],q,L[k].valueOf),l(L,"Symbol"),l(Math,"Math",!0),l(r.JSON,"JSON",!0)},function(t,n,e){e(25)("asyncIterator")},function(t,n,e){e(25)("observable")},function(t,n,e){e(62);for(var r=e(1),o=e(5),i=e(17),u=e(7)("toStringTag"),f=["NodeList","DOMTokenList","MediaList","StyleSheetList","CSSRuleList"],c=0;c<5;c++){var a=f[c],s=r[a],l=s&&s.prototype;l&&!l[u]&&o(l,u,a),i[a]=i.Array}},function(t,n){"use strict";var e={versions:function(){var t=window.navigator.userAgent;return{trident:t.indexOf("Trident")>-1,presto:t.indexOf("Presto")>-1,webKit:t.indexOf("AppleWebKit")>-1,gecko:t.indexOf("Gecko")>-1&&t.indexOf("KHTML")==-1,mobile:!!t.match(/AppleWebKit.*Mobile.*/),ios:!!t.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),android:t.indexOf("Android")>-1||t.indexOf("Linux")>-1,iPhone:t.indexOf("iPhone")>-1||t.indexOf("Mac")>-1,iPad:t.indexOf("iPad")>-1,webApp:t.indexOf("Safari")==-1,weixin:t.indexOf("MicroMessenger")==-1}}()};t.exports=e},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}var o=e(40),i=r(o),u=function(){function t(t,n,e){return n||e?String.fromCharCode(n||e):o[t]||t}function n(t){return l[t]}var e=/&quot;|&lt;|&gt;|&amp;|&nbsp;|&apos;|&#(\d+);|&#(\d+)/g,r=/['<> "&]/g,o={"&quot;":'"',"&lt;":"<","&gt;":">","&amp;":"&","&nbsp;":" "},f=/\u00a0/g,c=/<br\s*\/?>/gi,a=/\r?\n/g,s=/\s/g,l={};for(var p in o)l[o[p]]=p;return o["&apos;"]="'",l["'"]="&#39;",{encode:function(t){return t?(""+t).replace(r,n).replace(a,"<br/>").replace(s,"&nbsp;"):""},decode:function(n){return n?(""+n).replace(c,"\n").replace(e,t).replace(f," "):""},encodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},encodeBase16forJSON:function(t){if(!t)return t;t=t.replace(/[\u4E00-\u9FBF]/gi,function(t){return escape(t).replace("%u","\\u")});for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},decodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e+=2)n.push(String.fromCharCode("0x"+t.slice(e,e+2)));return n.join("")},encodeObject:function(t){if(t instanceof Array)for(var n=0,e=t.length;e>n;n++)t[n]=u.encodeObject(t[n]);else if("object"==("undefined"==typeof t?"undefined":(0,i.default)(t)))for(var r in t)t[r]=u.encodeObject(t[r]);else if("string"==typeof t)return u.encode(t);return t},loadScript:function(t){var n=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(n),n.setAttribute("src",t)},addLoadEvent:function(t){var n=window.onload;"function"!=typeof window.onload?window.onload=t:window.onload=function(){n(),t()}}}}();t.exports=u},function(t,n){function e(t,n){t.classList?t.classList.add(n):t.className+=" "+n}t.exports=e},function(t,n){function e(t,n){if(t.classList)t.classList.remove(n);else{var e=new RegExp("(^|\\b)"+n.split(" ").join("|")+"(\\b|$)","gi");t.className=t.className.replace(e," ")}}t.exports=e},,,function(t,n){"use strict";function e(){var t=document.querySelector("#page-nav");if(t&&!document.querySelector("#page-nav .extend.prev")&&(t.innerHTML='<a class="extend prev disabled" rel="prev">&laquo; Prev</a>'+t.innerHTML),t&&!document.querySelector("#page-nav .extend.next")&&(t.innerHTML=t.innerHTML+'<a class="extend next disabled" rel="next">Next &raquo;</a>'),yiliaConfig&&yiliaConfig.open_in_new){var n=document.querySelectorAll(".article-entry a:not(.article-more-a)");n.forEach(function(t){t.setAttribute("target","_blank")})}var e=document.querySelector("#js-aboutme");e&&0!==e.length&&(e.innerHTML=e.innerText)}t.exports={init:e}},,,,,,,,,function(t,n){function e(t,n){if("string"==typeof n)return t.insertAdjacentHTML("afterend",n);var e=t.nextSibling;return e?t.parentNode.insertBefore(n,e):t.parentNode.appendChild(n)}t.exports=e}])</script><script src="/./main.2d7529.js"></script><script>!function(){var e=function(e){var t=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(t),t.setAttribute("src",e)};e("/slider.885efe.js")}()</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-nav header-menu">
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+    
+    
+
+    <ul style="width: 70%">
+    
+    
+      
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      
+        
+      
+      <li style="width: 50%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      
+        
+      
+        
+    </ul>
+  </div>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="http://candashuai.3vkj.net/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>这里空空如也</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
+
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

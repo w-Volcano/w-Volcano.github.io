@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/5 | w-Volcano&#39;s Hexo Blog</title>
+  <title>移动端网页 | w-Volcano&#39;s Hexo Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="w-Volcano&#39;s Hexo Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="w-Volcano&#39;s Hexo Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2020/05/index.html">
+  <meta name="description" content="视口1&lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, user-scalable&#x3D;no, initial-scale&#x3D;1.0, maximum-scale&#x3D;1.0, minimum-scale&#x3D;1.0&quot;&gt;     属性 解释说明    width 宽度设置的是viewport宽度，课题设置device-width特殊值   init">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移动端网页">
+<meta property="og:url" content="http://yoursite.com/2020/05/03/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%BD%91%E9%A1%B5/index.html">
 <meta property="og:site_name" content="w-Volcano&#39;s Hexo Blog">
-<meta property="og:description" content="w-Volcano&#39;s Hexo Blog">
+<meta property="og:description" content="视口1&lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, user-scalable&#x3D;no, initial-scale&#x3D;1.0, maximum-scale&#x3D;1.0, minimum-scale&#x3D;1.0&quot;&gt;     属性 解释说明    width 宽度设置的是viewport宽度，课题设置device-width特殊值   init">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-05-03T09:51:29.235Z">
+<meta property="article:modified_time" content="2020-05-03T09:53:39.780Z">
 <meta property="article:author" content="w-Volcano">
 <meta name="twitter:card" content="summary">
   
@@ -165,406 +167,283 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-移动端网页" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      移动端网页
+    </h1>
+  
+
+        
+        <a href="/2020/05/03/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%BD%91%E9%A1%B5/" class="archive-article-date">
+  	<time datetime="2020-05-03T09:51:29.235Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="视口"><a href="#视口" class="headerlink" title="视口"></a>视口</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>解释说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>width</code></td>
+<td>宽度设置的是<code>viewport</code>宽度，课题设置<code>device-width</code>特殊值</td>
+</tr>
+<tr>
+<td><code>initial-scale</code></td>
+<td>初始缩放比，大于<code>0</code>的数字</td>
+</tr>
+<tr>
+<td><code>maximum-scale</code></td>
+<td>最大缩放比，大于<code>0</code>的数字</td>
+</tr>
+<tr>
+<td><code>minimum-scale</code></td>
+<td>最小缩放比，大于<code>0</code>的数字</td>
+</tr>
+<tr>
+<td><code>user-scalable</code></td>
+<td>用户是否可以缩放，<code>yes</code>或<code>no</code>(<code>0</code>或<code>1</code>)</td>
+</tr>
+</tbody></table>
+<a id="more"></a>
+
+<h2 id="CSS初始化规范"><a href="#CSS初始化规范" class="headerlink" title="CSS初始化规范"></a>CSS初始化规范</h2><blockquote>
+<p> Normalize.css</p>
+</blockquote>
+<h2 id="按钮样式"><a href="#按钮样式" class="headerlink" title="按钮样式"></a>按钮样式</h2><ul>
+<li>去除按钮高亮<ul>
+<li><code>-webkit-tap-highlight-color : transparent;</code></li>
+</ul>
+</li>
+<li>在移动端浏览器默认的外观在ios上加上这个属性才能给按钮和输入框自定义样式<ul>
+<li><code>-webkit-appearance : none;</code></li>
+</ul>
+</li>
+<li>禁用长按页面时的弹出菜单<ul>
+<li><code>img，a{-webkit-touch-callout:none；}</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="流式布局-百分比布局"><a href="#流式布局-百分比布局" class="headerlink" title="流式布局(百分比布局)"></a>流式布局(百分比布局)</h2><ul>
+<li><p><code>max-width</code>最大宽度（<code>max-height</code>最大高度）</p>
+</li>
+<li><p><code>min-width</code> 最小宽度（<code>min-height</code> 最小高度）</p>
+</li>
+</ul>
+<h2 id="rem布局"><a href="#rem布局" class="headerlink" title="rem布局"></a>rem布局</h2><ul>
+<li><code>em</code>：父元素的字体大小<ul>
+<li>如果父元素的字体大小为<code>12px</code>，则子元素宽度设置<code>10em</code>相当于<code>12*10px=120px</code></li>
+</ul>
+</li>
+<li><code>rem</code>：<code>html</code>元素的字体大小<ul>
+<li><code>html</code>标签的元素为<code>14px</code>,则某元素宽度<code>10rem</code>相当于<code>14*10px=140px</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">这句话的意思就是：在我们屏幕上，并且最大宽度是 800像素 设置我们想要的样式</span></span><br><span class="line"><span class="comment">max-width 小于等于800</span></span><br><span class="line"><span class="comment">媒体查询可以根据不同的屏幕尺寸改变不同的样式</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span>(<span class="attribute">max-width:</span><span class="number">800px</span>)&#123;</span><br><span class="line">  <span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>:pink;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span>(<span class="attribute">max-width:</span><span class="number">500px</span>)&#123;</span><br><span class="line">  <span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>:purple</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="媒体查询引入文件"><a href="#媒体查询引入文件" class="headerlink" title="媒体查询引入文件"></a>媒体查询引入文件</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">/*</span><br><span class="line">当我们屏幕大于等于 640px以上的，div 一行显示两个</span><br><span class="line">当我们屏幕小于640px，div 一行显示一个</span><br><span class="line">一个建议：媒体查询最好的方式从小到大</span><br><span class="line">*/</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"style320.css"</span> <span class="attr">media</span>=<span class="string">"screen and (min-width:320px)"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"style640.css"</span> <span class="attr">media</span>=<span class="string">"screen and (min-width:640px)"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Less预处理语言"><a href="#Less预处理语言" class="headerlink" title="Less预处理语言"></a>Less预处理语言</h2><p>后缀名：<code>.less</code></p>
+<ul>
+<li><p>声明变量</p>
+<ul>
+<li><code>@key:value;</code></li>
+<li>不支持数字开头，不包含特殊符号，严格区分大小写</li>
+</ul>
+</li>
+<li><p>编译</p>
+<ul>
+<li>在<code>VScode</code>中，下载插件<code>easy less</code>，安装完毕，每次保存<code>less</code>文件时，会在同目录下生成或更新同名<code>css</code>文件</li>
+</ul>
+</li>
+<li><p>嵌套</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.header</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>:<span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>:pink;</span><br><span class="line">  <span class="comment">/* 1.less嵌套 子元素的样式直接写到父元素里面就好了 */</span> </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:red;</span><br><span class="line">  <span class="comment">/* 如果有伪类、交集选择器、伪元素选择器，我们内存选择器的面前需要加&amp; */</span></span><br><span class="line">  &amp;:hover&#123;</span><br><span class="line">    <span class="selector-tag">color</span><span class="selector-pseudo">:blue</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运算符</p>
+<ul>
+<li>我们运算符的左右两侧必须敲一个空格隔开</li>
+<li>两个数参与运算如果只有一个数有单位，则最后的结果就以这个单位为准</li>
+<li>两个数参与运算，如果2个数都有单位，而且不一样的单位最的结果以第一个单位为准</li>
+</ul>
+</li>
+<li><p><code>less</code>导入<code>less</code></p>
+<ul>
+<li><code>@import &#39;路径&#39;</code></li>
+<li>可省略后缀名</li>
+</ul>
+</li>
+<li><p><code>rem</code>适配方案1</p>
+<ul>
+<li>自己划分，自己设置<code>rem</code></li>
+</ul>
+</li>
+<li><p><code>rem</code>适配方案2</p>
+<ul>
+<li><code>flexible.js</code>，划分为10块</li>
+</ul>
+</li>
+<li><p><code>px-&gt;rem</code>单位</p>
+<ul>
+<li><code>vscode</code>下载<code>cssrem</code></li>
+<li>可以在<code>User-Settings</code>中修改<code>cssrem.rootFontSize</code>修改<code>html</code>字体大小</li>
+</ul>
+</li>
+<li></li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wxpay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/Webpack/" class="archive-article-date">
-  	<time datetime="2020-05-03T10:02:40.506Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/Webpack/">Webpack</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Vue/" class="article-tag-list-link color4">Vue</a>
+        			<a href="/categories/CSS/" class="article-tag-list-link color4">CSS</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2020/05/03/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%BD%91%E9%A1%B5/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/Vue%E7%BB%84%E4%BB%B6%E5%8C%96/" class="archive-article-date">
-  	<time datetime="2020-05-03T10:02:40.499Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/Vue%E7%BB%84%E4%BB%B6%E5%8C%96/">Vue组件化</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Vue/" class="article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
+  
+<nav id="article-nav">
+  
+    <a href="/2020/05/03/CSS3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          CSS3
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/05/03/CSS/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/Vuex/" class="archive-article-date">
-  	<time datetime="2020-05-03T10:02:40.490Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/Vuex/">Vuex</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Vue/" class="article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/VueRouter/" class="archive-article-date">
-  	<time datetime="2020-05-03T10:02:40.482Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/VueRouter/">VueRouter</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Vue/" class="article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/VueNote/" class="archive-article-date">
-  	<time datetime="2020-05-03T10:02:40.476Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/VueNote/">VueNote</a>
-    </h1>
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Vue/" class="article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/VueCLI/" class="archive-article-date">
-  	<time datetime="2020-05-03T10:02:40.469Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/VueCLI/">VueCLI</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Vue/" class="article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/axios/" class="archive-article-date">
-  	<time datetime="2020-05-03T10:02:40.455Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/axios/">axios</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Vue/" class="article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/Node/" class="archive-article-date">
-  	<time datetime="2020-05-03T10:01:21.847Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/Node/">Node</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Node/" class="article-tag-list-link color5">Node</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/%E6%9D%82%E9%A1%B9/" class="archive-article-date">
-  	<time datetime="2020-05-03T09:58:45.573Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/%E6%9D%82%E9%A1%B9/">杂项</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Javascript/" class="article-tag-list-link color1">Javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/%E9%AB%98%E7%BA%A7%E6%96%B9%E6%B3%95%E5%92%8C%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2020-05-03T09:58:45.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/%E9%AB%98%E7%BA%A7%E6%96%B9%E6%B3%95%E5%92%8C%E5%87%BD%E6%95%B0/">高级方法和函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Javascript/" class="article-tag-list-link color1">Javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2020/05/page/2/">2</a><a class="page-number" href="/archives/2020/05/page/3/">3</a><a class="extend next" rel="next" href="/archives/2020/05/page/2/">Next &amp;raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -587,8 +466,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
