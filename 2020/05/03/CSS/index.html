@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>CSS | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本笔记中，标签&#x3D;元素 普通选择器   选择器 描述    标签名{} 选取该标签名的一切元素   .className{} 选取class属性值为className的一切元素   #idName{} 选取id属性值为idName的唯一元素   选择器1,选择器2,选择器N{} 选择器分组:同时选中多个选择器对应的元素   *{} 通配选择器:选中网页所有的元素   选择器1选择器2选择器N{} 交">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS">
+<meta property="og:url" content="http://yoursite.com/2020/05/03/CSS/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="本笔记中，标签&#x3D;元素 普通选择器   选择器 描述    标签名{} 选取该标签名的一切元素   .className{} 选取class属性值为className的一切元素   #idName{} 选取id属性值为idName的唯一元素   选择器1,选择器2,选择器N{} 选择器分组:同时选中多个选择器对应的元素   *{} 通配选择器:选中网页所有的元素   选择器1选择器2选择器N{} 交">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-02T16:54:18.827Z">
+<meta property="article:modified_time" content="2020-02-29T12:21:40.907Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-CSS" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/03/CSS/" class="article-date">
+  <time datetime="2020-05-02T16:54:18.827Z" itemprop="datePublished">2020-05-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>本笔记中，标签=元素</strong></p>
+<h1 id="普通选择器"><a href="#普通选择器" class="headerlink" title="普通选择器"></a>普通选择器</h1><table>
+<thead>
+<tr>
+<th align="center">选择器</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>标签名{}</code></td>
+<td align="center">选取该标签名的一切元素</td>
+</tr>
+<tr>
+<td align="center"><code>.className{}</code></td>
+<td align="center">选取<code>class</code>属性值为<code>className</code>的一切元素</td>
+</tr>
+<tr>
+<td align="center"><code>#idName{}</code></td>
+<td align="center">选取<code>id</code>属性值为<code>idName</code>的唯一元素</td>
+</tr>
+<tr>
+<td align="center"><code>选择器1,选择器2,选择器N{}</code></td>
+<td align="center">选择器分组:同时选中多个选择器对应的元素</td>
+</tr>
+<tr>
+<td align="center"><code>*{}</code></td>
+<td align="center">通配选择器:选中网页所有的元素</td>
+</tr>
+<tr>
+<td align="center"><code>选择器1选择器2选择器N{}</code></td>
+<td align="center">交集（复合）选择器:选中满足多个选择器的元素</td>
+</tr>
+<tr>
+<td align="center"><code>祖先元素 后代元素{}</code></td>
+<td align="center">后代元素选择器:选中祖先元素的所有指定后代元素，含子孙</td>
+</tr>
+<tr>
+<td align="center"><code>父元素&gt;子元素{}</code></td>
+<td align="center">子元素选择器:选中父元素的所有指定子元素，含子不含孙，<code>IE6</code>以下浏览器不支持</td>
+</tr>
+</tbody></table>
+<h1 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h1><ul>
+<li><code>选择器:hover{}</code><ul>
+<li>鼠标悬浮在该元素上的样式</li>
+<li><code>IE6</code>不支持<code>&lt;a&gt;</code>标签以外的标签使用</li>
+</ul>
+</li>
+<li><code>选择器:active{}</code><ul>
+<li>鼠标点击时该元素的样式</li>
+<li>IE6不支持<code>&lt;a&gt;</code>标签以外的标签使用</li>
+</ul>
+</li>
+<li><code>选择器:link{}</code><ul>
+<li>未被访问过时该元素的样式</li>
+<li>一般只能用于<code>&lt;a&gt;</code>超链接标签</li>
+</ul>
+</li>
+<li><code>选择器:visited{}</code><ul>
+<li>访问过后该元素的样式（只能设置字体颜色）</li>
+<li>一般只能用于<code>&lt;a&gt;</code>超链接标签</li>
+</ul>
+</li>
+<li><code>选择器:focus{}</code><ul>
+<li>获取焦点时该元素的样式</li>
+</ul>
+</li>
+<li><code>选择器:before{}</code><ul>
+<li>指定元素前该元素的样式</li>
+</ul>
+</li>
+<li><code>选择器:after{}</code><ul>
+<li>指定元素后该元素的样式</li>
+<li><code>IE6</code>不支持</li>
+</ul>
+</li>
+<li><code>选择器::selection{}</code><ul>
+<li>注意双冒号</li>
+</ul>
+</li>
+<li><code>选择器::-moz-selection{}</code><ul>
+<li><code>FireFox</code>专用</li>
+<li>为被选中的内容设置样式</li>
+</ul>
+</li>
+<li><code>选择器:first-letter{}</code><ul>
+<li>标签内容首字母的样式</li>
+<li>注意:不是下划线</li>
+</ul>
+</li>
+<li><code>选择器:first-line{}</code><ul>
+<li>标签内容首行的样式</li>
+</ul>
+</li>
+<li><code>选择器:before{}</code><ul>
+<li>一般与<code>content</code>属性一起使用，为该元素之前的位置设置内容，这些内容无法被选中</li>
+</ul>
+</li>
+<li><code>选择器:after{}</code><ul>
+<li>一般与<code>content</code>属性一起使用，为该元素之后的位置设置内容，这些内容无法被选中</li>
+</ul>
+</li>
+</ul>
+<h1 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h1><ul>
+<li><code>标签名[属性名]{}</code><ul>
+<li>选取拥有该属性名的所有元素</li>
+</ul>
+</li>
+</ul>
+<p>例：<code>title</code>属性:</p>
+<p>​            <code>title</code>的值作为鼠标悬浮在元素上时显示的提示文字</p>
+<p>​        <code>p[title]</code>:</p>
+<p>​            选中所有有设置<code>title</code>属性的所有<code>&lt;p&gt;</code>元素</p>
+<ul>
+<li>标签名[属性名=some]{}<ul>
+<li>选取拥有该属性名且属性值为some的所有元素</li>
+</ul>
+</li>
+</ul>
+<p>例：<code>p[title=&#39;hello&#39;]</code></p>
+<p>​            选中所有有设置<code>title</code>属性且属性值为<code>&#39;hello&#39;</code>的所有<code>&lt;p&gt;</code>元素</p>
+<ul>
+<li><code>标签名[属性名^=some]{}</code><ul>
+<li>选取拥有该属性名且属性值以<code>some</code>为开头的所有元素</li>
+</ul>
+</li>
+<li><code>标签名[属性名$=some]{}</code><ul>
+<li>选取拥有该属性名且属性值以<code>some</code>为结尾的所有元素</li>
+</ul>
+</li>
+<li><code>标签名[属性名*=some]{}</code><ul>
+<li>选取拥有该属性名且属性值包含<code>some</code>的所有元素</li>
+</ul>
+</li>
+</ul>
+<h1 id="子元素的伪类"><a href="#子元素的伪类" class="headerlink" title="子元素的伪类"></a>子元素的伪类</h1><p><strong>IE8及IE6及以下不支持</strong></p>
+<ul>
+<li><p><code>（父元素&gt;）子元素:first-child{}</code></p>
+<p>​    预示着选择器可以结合使用</p>
+<p>​    选中（指定）父元素的第一个（位置）子元素</p>
+</li>
+<li><p><code>（父元素&gt;）子元素:last-child{}</code></p>
+<p>​    选中（指定）父元素的最后一个（位置）子元素</p>
+</li>
+<li><p><code>子元素:nth-child(num){}</code></p>
+<p>​    选中父元素的第<code>num</code>个（位置）子元素</p>
+<p>​    <code>num</code>参数一般为数字</p>
+<p>​    <code>num</code>特殊值:</p>
+<p>​        <code>even</code>:选取所有第偶数个（位置）子元素</p>
+<p>​        <code>odd</code>:选取所有第奇数个（位置）子元素</p>
+</li>
+<li><p><code>子元素:first-of-type{}</code></p>
+<p>​    选取父元素的所有该子元素类型的第一个子元素</p>
+</li>
+<li><p><code>子元素:last-of-type{}</code></p>
+<p>​    选取父元素的所有该子元素类型的最后一个子元素</p>
+</li>
+<li><p><code>子元素:nth-of-type(num){}</code></p>
+<p>​    选取父元素的所有该子元素类型的第<code>num</code>个子元素</p>
+<p>​    去前<code>X</code>个元素<code>num=-n+X</code></p>
+</li>
+<li><p><code>子元素:nth-last-of-type(num){}</code></p>
+<p>​    同上，只是从后往前算</p>
+</li>
+</ul>
+<h1 id="兄弟元素选择器"><a href="#兄弟元素选择器" class="headerlink" title="兄弟元素选择器"></a>兄弟元素选择器</h1><ul>
+<li><p><code>元素1+元素2{}</code></p>
+<p>可以选取元素1后紧挨着的元素2</p>
+<p>元素1和元素2互为兄弟元素</p>
+</li>
+<li><p><code>元素1~元素2{}</code></p>
+<p>可以选取元素1后所有的元素2</p>
+<p>元素1和元素2互为兄弟元素</p>
+</li>
+</ul>
+<h1 id="否定伪类"><a href="#否定伪类" class="headerlink" title="否定伪类"></a>否定伪类</h1><ul>
+<li><p>从已选中的元素中剔除某些元素</p>
+</li>
+<li><p><code>选择器1:not(选择器2){}</code></p>
+</li>
+</ul>
+<p>​        剔除选择器1中符合选择器2条件的元素</p>
+<h1 id="选择器优先级"><a href="#选择器优先级" class="headerlink" title="选择器优先级"></a>选择器优先级</h1><p>​    当使用不同选择器，选择同一个元素并设置相同的样式时，由选择器的优先级决定显示效果。</p>
+<p>​    优先级规则:</p>
+<p>​        内联样式        优先级    1000</p>
+<p>​        id选择器        优先级    100</p>
+<p>​        类和伪类        优先级    10</p>
+<p>​        元素选择器    优先级    1</p>
+<p>​        通配选择器    优先级    0</p>
+<p>​        继承的样式    优先级    没有优先级</p>
+<p>​    可以在样式的最后添加一个 <code>!important</code> 这样该样式将会获得一个最高的优先级，高于以上所有优先级，但是在开发中尽量避免使用，不方便修改。</p>
+<p>​    当选择器中包含多个选择器时，要把多个选择器的优先级相加在进行比较。</p>
+<p>​        注意：选择器优先级计算不会超过它的最大数量级</p>
+<p>​            比如选择器中最高的优先级10 则相加不会超过99</p>
+<p>​        注意：如果选择器的优先级相同,则会显示相对靠后设置的样式</p>
+<p>​        注意：并集选择器的优先级都是单独计算</p>
+<h1 id="伪类的优先级"><a href="#伪类的优先级" class="headerlink" title="伪类的优先级"></a>伪类的优先级</h1><ul>
+<li><p><code>:link</code></p>
+</li>
+<li><p><code>:visited</code></p>
+</li>
+<li><p><code>:hover</code></p>
+</li>
+<li><p><code>:active</code></p>
+</li>
+</ul>
+<p>​    优先级相同</p>
+<p>​    但是要按照以上顺序设置,不然会覆盖失效。</p>
+<h1 id="样式继承"><a href="#样式继承" class="headerlink" title="样式继承"></a>样式继承</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">''</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>p</code>标签会继承<code>div</code>的一些基本样式，不会被继承的样式有，背景、边框、定位等。</p>
+<h1 id="display"><a href="#display" class="headerlink" title="display"></a>display</h1><ul>
+<li><p><code>none</code></p>
+<ul>
+<li>不显示该元素,不占有位置</li>
+</ul>
+</li>
+<li><p><code>inline</code></p>
+<ul>
+<li>将元素变为内联元素</li>
+</ul>
+</li>
+<li><p><code>block</code></p>
+<ul>
+<li>将元素变为块元素</li>
+</ul>
+</li>
+<li><p><code>inline-block</code></p>
+<ul>
+<li>将元素变为行内块元素（既能设置宽高,又不会独占一行）</li>
+</ul>
+</li>
+</ul>
+<h1 id="visibility"><a href="#visibility" class="headerlink" title="visibility"></a>visibility</h1><ul>
+<li><p><code>visible</code></p>
+<ul>
+<li>默认值可见</li>
+</ul>
+</li>
+<li><p><code>hidden</code></p>
+<ul>
+<li>隐藏但占有位置</li>
+</ul>
+</li>
+</ul>
+<h1 id="overflow"><a href="#overflow" class="headerlink" title="overflow"></a>overflow</h1><p>​    处理子元素在父元素内的溢出情况</p>
+<ul>
+<li><p><code>visible</code></p>
+<ul>
+<li>默认值不做处理,会溢出</li>
+</ul>
+</li>
+<li><p><code>hidden</code></p>
+<ul>
+<li>溢出的部分会被隐藏</li>
+</ul>
+</li>
+<li><p><code>scroll</code></p>
+<ul>
+<li>不论溢出与否都会添加滚动条</li>
+</ul>
+</li>
+<li><p><code>auto</code></p>
+<ul>
+<li>按照溢出的方向添加滚动条</li>
+</ul>
+</li>
+</ul>
+<h1 id="文档流"><a href="#文档流" class="headerlink" title="文档流"></a>文档流</h1><p>默认所有元素都在文档流中。</p>
+<ul>
+<li>块元素:<ul>
+<li>独占一行,自上向下排列,宽度等于父元素宽度,高度由内容高度撑开</li>
+</ul>
+</li>
+<li>内联元素<ul>
+<li>只占内容的宽度和长度,自左向右排列</li>
+</ul>
+</li>
+</ul>
+<h1 id="float"><a href="#float" class="headerlink" title="float"></a>float</h1><ul>
+<li><p>none</p>
+<ul>
+<li>默认值,元素在文档流排列</li>
+</ul>
+</li>
+<li><p>left</p>
+<ul>
+<li>元素脱离文档流并向左浮动（左上）</li>
+</ul>
+</li>
+<li><p>right</p>
+<ul>
+<li>元素脱离文档流并向右浮动（右上）</li>
+</ul>
+</li>
+</ul>
+<h2 id="浮动元素"><a href="#浮动元素" class="headerlink" title="浮动元素"></a>浮动元素</h2><ol>
+<li><p>浮动碰到父元素边框或浮动元素停止</p>
+</li>
+<li><p>浮动元素不会超过它上边的兄弟元素，最多一边齐</p>
+</li>
+<li><p>浮动元素不会盖住文档流中元素内的文字</p>
+</li>
+<li><p>块元素浮动后，宽度和高度都会被内容撑开</p>
+</li>
+<li><p>内联元素浮动后，宽度和高度可以被样式设置</p>
+</li>
+</ol>
+<h1 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a>BFC</h1><p><strong>Block Formatting Context（IE6及以下不支持）</strong></p>
+<p>简称 BFC 该属性可以设置打开或关闭，默认为关闭。</p>
+<p>当开启元素的BFC属性后，元素具有如下的特性:</p>
+<ol>
+<li><p>父元素的垂直外边距不会和子元素重叠</p>
+</li>
+<li><p>开启BFC的元素不会被浮动元素所覆盖</p>
+</li>
+<li><p>开启BFC的元素可以包含浮动的子元素</p>
+</li>
+</ol>
+<h2 id="开启BFC方法"><a href="#开启BFC方法" class="headerlink" title="开启BFC方法"></a>开启BFC方法</h2><ol>
+<li><p>设置元素浮动————可以撑开父元素，但是父元素宽度丢失，但会使下方元素上移</p>
+</li>
+<li><p>设置元素绝对定位————同上</p>
+</li>
+<li><p>设置元素为<code>line-block</code>————会导致宽度丢失</p>
+</li>
+<li><p>设置元素的<code>overflow</code>为非<code>visible</code>————副作用最小</p>
+<p>在IE6中不支持，但是可以开启<code>hasLayout</code>隐藏属性</p>
+</li>
+</ol>
+<h2 id="开启方式"><a href="#开启方式" class="headerlink" title="开启方式"></a>开启方式</h2><p>​    1、<code>zoom:1</code>    数字为放大倍数</p>
+<p>​    2、父元素设置宽度后自动打开</p>
+<h1 id="clear"><a href="#clear" class="headerlink" title="clear"></a>clear</h1><p>可以用来清楚其他浮动元素对当前元素的影响</p>
+<ul>
+<li><p><code>none</code></p>
+<ul>
+<li>默认值</li>
+</ul>
+</li>
+<li><p><code>left</code></p>
+<ul>
+<li>清楚左侧浮动元素对当前元素的影响</li>
+</ul>
+</li>
+<li><p><code>right</code></p>
+<ul>
+<li>清楚右侧浮动元素对当前元素的影响</li>
+</ul>
+</li>
+<li><p><code>both</code></p>
+<ul>
+<li>清楚两侧元素对当前元素的影响（清除对当前元素影响最大的浮动元素）</li>
+</ul>
+</li>
+</ul>
+<h1 id="高度塌陷问题"><a href="#高度塌陷问题" class="headerlink" title="高度塌陷问题"></a>高度塌陷问题</h1><p>​    在文档流中，子元素会撑开父元素的高度，但是子元素设置浮动时，会导致子元素脱离文档流，父元素的高度塌陷，导致父元素下方各个元素上移，造成页面布局混乱。</p>
+<ol>
+<li><p>开启BFC或<code>hasLayout</code></p>
+</li>
+<li><p>设置<code>overflow</code>为非<code>visible</code></p>
+</li>
+<li><p>使用<code>clear</code>属性</p>
+</li>
+<li><p>通过<code>after</code>伪类添加一个块元素再设置<code>clear</code>属性</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>:<span class="string">""</span>;</span><br><span class="line">    display:block;A</span><br><span class="line">    <span class="selector-tag">clear</span><span class="selector-pseudo">:both</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>优点:不会添加多余的结构</p>
+</li>
+</ol>
+<h1 id="父子元素外边距重叠问题"><a href="#父子元素外边距重叠问题" class="headerlink" title="父子元素外边距重叠问题"></a>父子元素外边距重叠问题</h1><p>​    描述：子元素<code>box2</code>的上边框若与父元素<code>box1</code>的上边框重叠，则给子元素设置<code>margin-top</code>会直接传递给父元素，相当于给父元素设置<code>margin-top</code></p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">	<span class="attribute">content</span>:<span class="string">""</span>;</span><br><span class="line">	<span class="attribute">display</span>:table;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>综上，可将代码整合为</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:before</span>,<span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>:<span class="string">""</span>;</span><br><span class="line">    <span class="attribute">display</span>:table;</span><br><span class="line">    <span class="attribute">clear</span>:both;</span><br><span class="line">&#125;</span><br><span class="line">.clearfix&#123;//兼容IE6</span><br><span class="line">    <span class="selector-tag">zoom</span><span class="selector-pseudo">:1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="position"><a href="#position" class="headerlink" title="position"></a>position</h1><p>通过定位可以任意的摆放元素的位置</p>
+<ul>
+<li><p><code>static</code></p>
+<ul>
+<li>默认值,元素没有定位（未开启）</li>
+</ul>
+</li>
+<li><p><code>relative</code></p>
+<ul>
+<li>开启元素相对定位</li>
+</ul>
+</li>
+<li><p><code>absolute</code></p>
+<ul>
+<li>开启元素的绝对定位</li>
+</ul>
+</li>
+<li><p><code>fixed</code></p>
+<ul>
+<li>开启元素的固定定位（也是绝对定位的一种）</li>
+</ul>
+</li>
+</ul>
+<h2 id="relative"><a href="#relative" class="headerlink" title="relative"></a>relative</h2><ol>
+<li><p>若不设置偏移量，则元素不会发生任何变化，可使用left、right、top、bottom来设置偏移量</p>
+</li>
+<li><p>相对定位是在相对于元素在文档流中原来的位置进行偏移</p>
+</li>
+<li><p>相对定位不会脱离文档流,类似于灵魂出窍</p>
+</li>
+<li><p>相对定位会让元素提升一个层级，可以覆盖文档流元素</p>
+</li>
+<li><p>相对定位不会改变元素性质，块还是块，内联依旧是内联</p>
+</li>
+</ol>
+<h2 id="absolute"><a href="#absolute" class="headerlink" title="absolute"></a>absolute</h2><ol>
+<li><p>绝对定位会脱离文档流</p>
+</li>
+<li><p>不设置偏移量，元素位置不会发生变化</p>
+</li>
+<li><p>相对于离它最近的开启了定位的祖先元素定位</p>
+</li>
+<li><p>绝对定位会让元素提升一个层级，可以覆盖文档流元素</p>
+</li>
+<li><p>绝对定位会改变元素性质，元素都变为块元素</p>
+</li>
+</ol>
+<h2 id="fixed"><a href="#fixed" class="headerlink" title="fixed"></a>fixed</h2><p>​        同上1245</p>
+<ol>
+<li><p>永远相对于浏览器定位，原点为页面左上角</p>
+</li>
+<li><p>不会随着滚动条移动而被隐藏（万恶的广告）</p>
+</li>
+</ol>
+<p>​        IE6不支持固定定位</p>
+<p>​    若开启定位后元素层级相同，则结构在下面的元素覆盖上面的元素</p>
+<h1 id="z-index"><a href="#z-index" class="headerlink" title="z-index"></a>z-index</h1><p>​    一个正整数表示层级</p>
+<p>​    没有开启定位的元素不能使用z-index</p>
+<p>​    父元素层级再高也不能盖住子元素</p>
+<p>​    层级越高越优先显示</p>
+<h1 id="opacity"><a href="#opacity" class="headerlink" title="opacity"></a>opacity</h1><p>​    设置元素的透明</p>
+<p>​    0~1之间的值</p>
+<p>​    0:全透明</p>
+<p>​    1:不透明</p>
+<p>​    IE8及以下不兼容,故使用</p>
+<p>​        <code>filter:alpha(opacity=百分比)</code></p>
+<p>​        <code>IE tester</code>有<code>bug</code>导致<code>IE6</code>无法显示，实际上也可以</p>
+<h1 id="表格样式"><a href="#表格样式" class="headerlink" title="表格样式"></a>表格样式</h1><ul>
+<li><code>border-spacing</code>属性</li>
+</ul>
+<p>​        调整表格边框和单元格的距离</p>
+<p>​        <code>XXpx</code></p>
+<ul>
+<li><code>border-collapse</code>属性</li>
+</ul>
+<p>​        可以调整表格边框和单元格边框合并</p>
+<p>​        <code>collapse</code></p>
+<p>​        设置边框合并后，<code>border-spacing</code>属性自动失效</p>
+<h1 id="Hack"><a href="#Hack" class="headerlink" title="Hack"></a>Hack</h1><p>​    有一些情况,有一些特殊的代码我们只需要在某些特殊的浏览器执行,而在别的浏览器中不需要执行,这是就可以使用<code>CSS</code>Hack来解决问题</p>
+<p>​    <code>CSS Hack</code>实际上是一个特殊的代码,这段代码只在某些浏览器中可以识别,而在其他浏览器不能识别,通过这种方式来为一些浏览器设置特殊的代码</p>
+<h2 id="条件hack"><a href="#条件hack" class="headerlink" title="条件hack"></a>条件hack</h2><p>​    只会对IE10以下浏览器有用,其他浏览器只会当成注释。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--[if IE 6]&gt;	//表示以下代码只会在IE6中执行</span></span><br><span class="line"><span class="comment">	HTML代码块</span></span><br><span class="line"><span class="comment">&lt;![endif]--&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--[if lte IE 6]&gt;	//表示以下代码只会在IE6及以下浏览器中被执行</span></span><br><span class="line"><span class="comment">	HTML代码块</span></span><br><span class="line"><span class="comment">&lt;![endif]--&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="通用语法"><a href="#通用语法" class="headerlink" title="通用语法"></a>通用语法</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--[if 关键字 IE 版本]&gt;</span></span><br><span class="line"><span class="comment">	HTML代码块</span></span><br><span class="line"><span class="comment">&lt;![endif]--&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h3><ol>
+<li><p>空</p>
+<p>是否,相当于==</p>
+</li>
+<li><p><code>gt</code></p>
+<p><code>greater than</code>大于版本</p>
+</li>
+<li><p><code>gte</code></p>
+<p><code>greater than or equal</code>大于等于版本</p>
+</li>
+<li><p><code>lt</code></p>
+<p><code>less than</code> 小于版本</p>
+</li>
+<li><p><code>lte</code></p>
+<p><code>less than or equal</code>    小于等于版本</p>
+</li>
+<li><p><code>!</code></p>
+<p>非,相当于!=</p>
+</li>
+</ol>
+<h2 id="属性hack"><a href="#属性hack" class="headerlink" title="属性hack"></a>属性hack</h2><p>​    对某项<code>CSS</code>属性<code>hack</code></p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">选择器&#123;</span><br><span class="line">	_属性名:属性值;	//表示改样式只有在IE6及以下的浏览器才可一识别</span><br><span class="line">	*属性名:属性值;	//表示改样式只有在IE7及以下的浏览器才可一识别</span><br><span class="line">	属性名:属性值\0;//表示改样式只有在IE8及以上的浏览器才可一识别</span><br><span class="line">&#125;</span><br><span class="line">选择符<span class="selector-tag">hack</span>:</span><br><span class="line">*<span class="selector-tag">HTML</span>.选择器&#123;</span><br><span class="line">			</span><br><span class="line">&#125;</span><br><span class="line">//该选择器只会被IE6识别</span><br></pre></td></tr></table></figure>
+
+<h1 id="网页图标"><a href="#网页图标" class="headerlink" title="网页图标"></a>网页图标</h1><ol>
+<li>首先把<code>favicon.ico</code>这个图标放到根目录下。</li>
+<li>再<code>html</code>里面，<code>head</code>之间引入代码。</li>
+</ol>
+<p><code>&lt;link rel = &quot;shortcut icon&quot; href = &quot;favicon.ico&quot; type = &quot;image/x-icon&quot; /&gt;</code></p>
+<p>在<a href="http://www.bitbug.net" target="_blank" rel="noopener">www.bitbug.net</a>网站上将图片转化为<code>ico</code>图标格式</p>
+<h1 id="SEO-搜索引擎优化"><a href="#SEO-搜索引擎优化" class="headerlink" title="SEO(搜索引擎优化)"></a>SEO(搜索引擎优化)</h1><h2 id="标签优化"><a href="#标签优化" class="headerlink" title="标签优化"></a>标签优化</h2><ul>
+<li><p><code>title</code>：百度28汉字以内，谷歌35汉字以内</p>
+</li>
+<li><p><code>description</code>：120汉字以内</p>
+<p><code>&lt;meta name = “description&quot; content = &quot;描述内容” /&gt;</code></p>
+</li>
+<li><p><code>keywords</code>：</p>
+<p><code>&lt;meta name = “keywords&quot; content = &quot;关键字内容” /&gt;</code></p>
+</li>
+</ul>
+<h2 id="logo优化"><a href="#logo优化" class="headerlink" title="logo优化"></a>logo优化</h2><p><code>logo</code>里面首先放一个<code>h1</code>标签，目的是为了提权，告诉搜索引擎，这个地方很重要。</p>
+<p><code>h1</code>里面在放一个连接，可以返回首页的，给连接一个大小和<code>logo</code>的背景图片·连接里面要放文字（网站名称），为了搜索引擎收录我们。但是文字不要显示出来。</p>
+<p>直接给<code>font-size：0;</code>就看不到文字了。</p>
+<p>最后给链接一个<code>title</code>，这样鼠标放到<code>logo</code>上，就可以看到提示文字了</p>
+<h1 id="字体图标"><a href="#字体图标" class="headerlink" title="字体图标"></a>字体图标</h1><ol>
+<li><p><a href="https://www.iconfont.cn/或https://icomoon.io/下载" target="_blank" rel="noopener">https://www.iconfont.cn/或https://icomoon.io/下载</a></p>
+</li>
+<li><p>将fonts文件夹放入根目录</p>
+</li>
+<li><p>新建字体 <code>@font-face</code></p>
+</li>
+<li><p><code>demo.html</code>中复制需要的结构</p>
+</li>
+<li><p>在需要添加字体图标的类中添加</p>
+</li>
+</ol>
+<h1 id="追加字体图标"><a href="#追加字体图标" class="headerlink" title="追加字体图标"></a>追加字体图标</h1><ol>
+<li><p>在下载网站中导入原下载包中的<code>selection.json</code></p>
+</li>
+<li><p>挑选新增图标</p>
+</li>
+<li><p>下载</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/03/CSS/" data-id="ck9pv9cg30000v0u7d87z6vf6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/03/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/03/CSS/">CSS</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/03/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
